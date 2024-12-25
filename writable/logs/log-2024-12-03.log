@@ -1,0 +1,46 @@
+ERROR - 2024-12-03 20:16:01 --> mysqli_sql_exception: Champ 'nom' inconnu dans field list in C:\wamp64\www\codeignit\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\codeignit\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO con...', 0)
+#1 C:\wamp64\www\codeignit\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO con...')
+#2 C:\wamp64\www\codeignit\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO con...')
+#3 C:\wamp64\www\codeignit\app\Models\Monmodele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO con...', Array)
+#4 C:\wamp64\www\codeignit\app\Controllers\Controleurmain.php(36): App\Models\Monmodele->ajouterContact(Array)
+#5 C:\wamp64\www\codeignit\system\CodeIgniter.php(942): App\Controllers\Controleurmain->ajoutervalider()
+#6 C:\wamp64\www\codeignit\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\codeignit\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeignit\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-12-03 20:16:01 --> Champ 'nom' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO contact (nom, prenom, email, telephone, commentaire) VALUES (:nom:, :prenom:, :email:, :telephone:, :commentaire:)', [...])
+ 2 APPPATH\Controllers\Controleurmain.php(36): App\Models\Monmodele->ajouterContact([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->ajoutervalider()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-03 20:17:28 --> mysqli_sql_exception: La table 'tpcontact.tpcontact' n'existe pas in C:\wamp64\www\codeignit\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\codeignit\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO tpc...', 0)
+#1 C:\wamp64\www\codeignit\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tpc...')
+#2 C:\wamp64\www\codeignit\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tpc...')
+#3 C:\wamp64\www\codeignit\app\Models\Monmodele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO tpc...', Array)
+#4 C:\wamp64\www\codeignit\app\Controllers\Controleurmain.php(36): App\Models\Monmodele->ajouterContact(Array)
+#5 C:\wamp64\www\codeignit\system\CodeIgniter.php(942): App\Controllers\Controleurmain->ajoutervalider()
+#6 C:\wamp64\www\codeignit\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\codeignit\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeignit\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-12-03 20:17:28 --> La table 'tpcontact.tpcontact' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO tpcontact (nomContact, prenomContact, emailContact, numeroContact, commentaireContact) VALUES (:nom:, :prenom:, :email:, :telephone:, :commentaire:)', [...])
+ 2 APPPATH\Controllers\Controleurmain.php(36): App\Models\Monmodele->ajouterContact([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->ajoutervalider()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-03 20:17:57 --> Call to undefined function App\Controllers\afficher()
+in APPPATH\Controllers\Controleurmain.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->ajoutervalider()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

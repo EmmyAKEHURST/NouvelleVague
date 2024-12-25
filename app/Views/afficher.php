@@ -16,7 +16,7 @@
                     <th>Téléphone</th>
                     <th>Nom</th>
                     <th>Prénom</th>
-                    <th>Email</th>
+                    <th>Emailt</th>
                 </tr>
             </thead>
             <tbody>

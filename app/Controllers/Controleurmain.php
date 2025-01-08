@@ -17,11 +17,11 @@ class Controleurmain extends BaseController
         return view('menu').view('afficher', $data);
     }
 
-    public function nbContacts()
+    public function nbcontacts()
     {
         $monmodel = new \App\Models\Monmodele();
         $data = ['nbContacts' => $monmodel->nbContacts()];
-        return view('menu').view('nbContacts', $data);
+        return view('menu').view('nbcontacts', $data);
     }
 
     public function ajouter()

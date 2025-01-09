@@ -80,7 +80,7 @@ class App extends BaseConfig
      * If true, the current Request object will automatically determine the
      * language to use based on the value of the Accept-Language header.
      *
-     * If false, no automatic detection will be performed.
+     * If false, no automatic detection will be performed. 
      */
     public bool $negotiateLocale = false;
 

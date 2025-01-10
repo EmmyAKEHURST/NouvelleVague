@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => '172.16.203.206',
         'username' => 'sio',
         'password' => 'Vanille2010',
-        'database' => 'TPContact',
+        'database' => 'nouvelle_vague',
         'DBDriver' => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

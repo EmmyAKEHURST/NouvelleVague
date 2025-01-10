@@ -9,7 +9,8 @@
 <body>
 <!-- Formulaire -->
 <?=validation_list_errors() ?>
-<form action="<?= base_url('Controleurmain/ajoutervalider') ?>" method="post" novalidate>
+<div class="container">
+    <form action="<?= base_url('Controleurmain/ajoutervalider') ?>" method="post" novalidate>
         <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" id="nom" name="nom" value="<?= set_value('nom') ?>" required>
@@ -37,5 +38,6 @@
         
         <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
+</div>
 </body>
 </html>

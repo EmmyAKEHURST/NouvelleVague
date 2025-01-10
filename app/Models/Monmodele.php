@@ -2,8 +2,9 @@
 namespace App\Models;
 use CodeIgniter\Model;
 class Monmodele extends Model{
+    protected $db;
 
-    public function getLesContacts(){
+    /*public function getLesContacts(){
         $db = \Config\Database::connect();
         $sql = "SELECT * FROM contact";
         $results = $db->query($sql);
@@ -36,6 +37,37 @@ class Monmodele extends Model{
         $db = \Config\Database::connect();
         $sql = "DELETE FROM contact WHERE numeroContact = :num:";
         $db->query($sql, ['num' => $data['numero']]);
+        $db->close();
+    }
+
+    public function connexion($data){
+        $db = \Config\Database::connect();
+        $sql = "";
+    }*/
+
+    public function verifmail($data){
+        $db = \Config\Database::connect();
+
+        $sql = "SELECT COUNT(*) as nb FROM Utilisateur where mail = ?";
+        $result = $db->query($sql, [
+            $data['mail']
+        ]);
+        $db->close();
+        return $result->getRow()->nb;
+    }
+
+    public function inscriptionValider($data){
+        $db = \Config\Database::connect();
+        
+        $builder = $db->table('Utilisateur');
+        $builder->insert([
+        'nom' => $data['nom'],
+        'prenom' => $data['prenom'],
+        'login' => $data['login'],
+        'mail' => $data['mail'],
+        'mdp' => $data['motdepasse']
+        ]);
+
         $db->close();
     }
 

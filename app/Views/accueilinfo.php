@@ -86,7 +86,7 @@
             </section>
         </div>
         <div class="bouton">
-        <?= anchor('#', "Voir plus d'évènements..") ?>
+            <?= anchor('#', "Voir plus d'évènements..") ?>
         </div>
     </div>
 </div>

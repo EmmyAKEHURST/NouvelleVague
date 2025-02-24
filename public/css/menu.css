@@ -447,7 +447,7 @@ nav input{
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 90%;
+  width: 80%;
 }
 
 .info-container h2{
@@ -654,6 +654,10 @@ section {
   margin-top: 20px;
   cursor: pointer;
   width: 300px;
+}
+
+.bouton a {
+  color: #ffffff !important;
 }
 
 /*footer*/

@@ -15,8 +15,12 @@
 
     <div class="mainContainer">
         <div class="bg">
-            <img src="../public/img/bg.jpg" alt="Fond">
+            <div class="title-container">
+                <h1 class="animated-title">Nouvelle Vague</h1>
+            </div>
         </div>
-    
+
+        
+    <script src="<?= base_url('js/Anime.js'); ?>" defer></script>
 </body>
 </html>

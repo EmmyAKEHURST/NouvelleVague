@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Mes Contacts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="<?= base_url('css/menu.css'); ?>">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <?= anchor('#', 'Mes contacts', ['class' => 'navbar-brand']) ?>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <?= anchor('Controleurmain/afficher', 'Afficher', ['class' => 'nav-link active']) ?> <!--nav-link est une classe de bootstrap -->
-                    </li>
-                    <li class="nav-item">
-                        <?= anchor('Controleurmain/nbcontacts', 'Nombre', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= anchor('Controleurmain/ajouter', 'Ajouter', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= anchor('Controleurmain/supprimer', 'Supprimer', ['class' => 'nav-link']) ?>
-                    </li>
-                </ul>
+    
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <?= anchor('/Accueil', '<img src="../public/img/nouvellevague.png" width="100px" alt="Logo">') ?>
             </div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><?= anchor('/TempsForts', 'Temps Forts') ?></li>
+                <li><?= anchor('/MesInscriptions', 'Mes Inscriptions') ?></li>
+                <li>
+                    <a href="#" class="desktop-item">Authentification</a>
+                    <input type="checkbox" id="showDropAuth">
+                    <label for="showDropAuth" class="mobile-item">Authentification</label>
+                    <ul class="drop-menu">
+                        <li><?= anchor('/Inscription', 'Inscription') ?></li>
+                        <li><?= anchor('/Connexion', 'Connexion') ?></li>
+                    </ul>
+                </li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>
     </nav>
+
 </body>
 </html>

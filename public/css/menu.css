@@ -11,6 +11,21 @@
   src: url("../font/Jost-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: Corinthia;
+  src: url("../font/Corinthia-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../font/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Virust;
+  src: url(../font/VIRUST.ttf) format("truetype");
+}
+
 /*Div principales*/
 
 a{
@@ -27,6 +42,7 @@ body {
     height: auto;
     margin: 0;
     transition:all .2s ease !important;
+    overflow-x: hidden;
 }
 
 /*BARRE MENU*/
@@ -329,22 +345,91 @@ nav input{
   font-weight: 600;
 }
 
+/* PAGE ACCUEIL */
+
 .mainContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   top: 0;
-  left: 80px;
   transition: all 0.5s ease;
-  width: calc(100% - 80px);
 }
 
 .bg{
   position: relative;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 85vh;
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url('../img/bg.jpg');
+  
+}
+
+.title-container{
+  overflow: hidden;
+  position: relative;
+  margin-top: 10%;
+  padding: 0px;
+  width: 100%;
+}
+
+.title-container h1{
+  font-family: 'Virust';
+  font-size: 100px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-shadow: #1f2531 0px 0px 10px;
+}
+
+.letter {
+  display: inline-block;
+  transform-origin: center;
+  opacity: 0;
+}
+
+.info-container{
+  padding: 20px;
+  margin-top: 60px;
+  background-color: #ffe4bb;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.info-container:hover{
+  scale: 1.05;
+}
+
+.info-container p{
+  font-size: 20px;
+  color: #303A3E;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 70%;
+}
+
+.info-container h2{
+  margin-bottom: 30px;
+  font-family: 'JostBold';
+  font-size: 40px;
+  color: #303A3E;
+}
+
+.tempsfort-container{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.5s ease;
 }

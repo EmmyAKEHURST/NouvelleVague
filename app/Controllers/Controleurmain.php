@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 class Controleurmain extends BaseController
 {
-    public function index($action = 'accueil')
+    public function index($action = 'accueilheader')
     {
         $monmodel = new \App\Models\Monmodele();
-        return view('header').view('accueil');
+        return view('menu').view('accueilheader').view('accueilinfo');
     }
 
     public function inscription()
@@ -29,13 +29,13 @@ class Controleurmain extends BaseController
         if ($this->validate($rules)) {
             if($monmodel->verifmail($this->request->getPost()) == 0){
                 $monmodel->inscriptionValider($this->request->getPost());
-                return view('header') . view('inscription');
+                return view('menu') . view('inscription');
             }
             else{
-                return view('header') . view('inscription');
+                return view('menu') . view('inscription');
             }
         } else {
-            return view('header') . view('inscription', ['errors' => $this->validator->getErrors()]);
+            return view('menu') . view('inscription', ['errors' => $this->validator->getErrors()]);
         }
     }
 }

@@ -17,6 +17,7 @@
         <div class="bg">
             <div class="title-container">
                 <h1 class="animated-title">Nouvelle Vague</h1>
+                <h2>Getcet-Sur-Mer</h2>
             </div>
         </div>
 

@@ -7,7 +7,7 @@ class Controleurmain extends BaseController
     public function index($action = 'accueilheader')
     {
         $monmodel = new \App\Models\Monmodele();
-        return view('menu').view('accueilheader').view('accueilinfo');
+        return view('menu').view('accueilheader').view('accueilinfo').view('footer');
     }
 
     public function inscription()

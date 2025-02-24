@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getcet-sur-Mer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
     <div class="info-container">
@@ -86,7 +86,7 @@
             </section>
         </div>
         <div class="bouton">
-            Voir plus d'événements...
+        <?= anchor('#', "Voir plus d'évènements..") ?>
         </div>
     </div>
 </div>

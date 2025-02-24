@@ -368,6 +368,19 @@ nav input{
   background-image: url('../img/bg.jpg');
 }
 
+.header{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../img/header.jpg');
+  margin-bottom: 50px;
+}
+
 .title-container{
   overflow: hidden;
   position: relative;
@@ -429,7 +442,7 @@ nav input{
 
 .info-container p{
   font-size: 20px;
-  color: #303A3E;
+  color: #596a71;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -445,7 +458,7 @@ nav input{
 }
 
 .tempsfort-container{
-  background-color: #1f2531;
+  background-color: #596a71;
   width: 90%;
   margin-top: 80px;
   padding: 30px;
@@ -631,6 +644,19 @@ section {
     }
 }
 
+.bouton{
+  background-color: #30363e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'JostBold';
+  margin-top: 20px;
+  cursor: pointer;
+  width: 300px;
+}
+
 /*footer*/
 
 .footer-clean {
@@ -720,3 +746,4 @@ section {
   font-size:13px;
   opacity:0.6;
 }
+

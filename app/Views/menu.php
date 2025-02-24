@@ -16,7 +16,7 @@
     <nav>
         <div class="wrapper">
             <div class="logo">
-                <?= anchor('/Accueil', '<img src="../public/img/nouvellevague.png" width="100px" alt="Logo">') ?>
+                <?= anchor('Controleurmain', '<img src="../public/img/nouvellevague.png" width="100px" alt="Logo">') ?>
             </div>
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
@@ -29,7 +29,7 @@
                     <input type="checkbox" id="showDropAuth">
                     <label for="showDropAuth" class="mobile-item">Authentification</label>
                     <ul class="drop-menu">
-                        <li><?= anchor('/Inscription', 'Inscription') ?></li>
+                        <li><?= anchor('Controleurmain/pgInscription', 'Inscription') ?></li>
                         <li><?= anchor('/Connexion', 'Connexion') ?></li>
                     </ul>
                 </li>

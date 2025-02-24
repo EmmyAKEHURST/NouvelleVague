@@ -7,43 +7,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-<!-- Formulaire -->
- <h1> Nouvelle Vague - Inscription </h1>
-<?=validation_list_errors() ?>
-<div class="container">
-    <form action="<?= base_url('Connexioncontroleur/inscription') ?>" method="post" novalidate>
-        <div class="mb-3">
-            <label for="nom" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="prenom" name="prenom" value="<?= set_value('prenom') ?>" required>
-        </div>
-        
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" name="nom" value="<?= set_value('nom') ?>" required>
-        </div>
+    <h1> Inscription : </h1>
+    <?=validation_list_errors() ?>
+    <div class="container">
+        <form action="<?= base_url('Controleurmain/inscription') ?>" method="post" novalidate>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" value="<?= set_value('prenom') ?>" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom" value="<?= set_value('nom') ?>" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Login</label>
-            <input type="text" class="form-control" id="login" name="login" value="<?= set_value('login') ?>" required>
-        </div>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Login</label>
+                <input type="text" class="form-control" id="login" name="login" value="<?= set_value('login') ?>" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="mail" name="mail" value="<?= set_value('mail') ?>" required>
-        </div>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">E-mail</label>
+                <input type="text" class="form-control" id="mail" name="mail" value="<?= set_value('mail') ?>" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Mot de passe</label>
-            <input type="text" class="form-control" id="motdepasse" name="motdepasse" value="<?= set_value('motdepasse') ?>" required>
-        </div>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Mot de passe</label>
+                <input type="text" class="form-control" id="motdepasse" name="motdepasse" value="<?= set_value('motdepasse') ?>" required>
+            </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Valider votre mot de passe</label>
-            <input type="text" class="form-control" id="validermotdepasse" name="validermotdepasse" value="<?= set_value('validermotdepasse') ?>" required>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-    </form>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Valider votre mot de passe</label>
+                <input type="text" class="form-control" id="validermotdepasse" name="validermotdepasse" value="<?= set_value('validermotdepasse') ?>" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>

@@ -18,6 +18,9 @@ $routes->get('/', 'Controleurmain::index');
 $routes->get('/Controleurmain', 'Controleurmain::index');
 $routes->post('/Controleurmain/connexion', 'Controleurmain::connexion');
 $routes->post('/Controleurmain/inscription', 'Controleurmain::inscription');
+$routes->get('/Controleurmain/pgInscription', 'Controleurmain::pgInscription');
+
+
 /*
 $routes->get('/Controleurmain', 'Controleurmain::index');
 $routes->get('Controleurmain/afficher', 'Controleurmain::afficher');

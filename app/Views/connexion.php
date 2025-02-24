@@ -8,24 +8,24 @@
 </head>
 <body>
 <!-- Formulaire -->
- <div class="bg-blur">
     <h1>Connexion </h1>
     <?=validation_list_errors() ?>
     <div class="container">
-        <form action="<?= base_url('Connexioncontroleur/connexion') ?>" method="post" novalidate>
+        <form action="<?= base_url('Controleurmain/connexion') ?>" method="post" novalidate>
 
             <div class="mb-3">
-                <label for="prenom" class="form-label">Login</label>
+                <label for="login" class="form-label">Login</label>
                 <input type="text" class="form-control" id="login" name="login" value="<?= set_value('login') ?>" required>
             </div>
 
             <div class="mb-3">
-                <label for="prenom" class="form-label">Mot de passe</label>
-                <input type="text" class="form-control" id="motdepasse" name="motdepasse" value="<?= set_value('motdepasse') ?>" required>
+                <label for="motdepasse" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="motdepasse" name="motdepasse" value="<?= set_value('motdepasse') ?>" required>
             </div>
             
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
+        </div>
     </div>
 </div>
 </body>

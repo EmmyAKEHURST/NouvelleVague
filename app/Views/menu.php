@@ -30,7 +30,7 @@
                     <label for="showDropAuth" class="mobile-item">Authentification</label>
                     <ul class="drop-menu">
                         <li><?= anchor('Controleurmain/pgInscription', 'Inscription') ?></li>
-                        <li><?= anchor('/Connexion', 'Connexion') ?></li>
+                        <li><?= anchor('Controleurmain/pgConnexion', 'Connexion') ?></li>
                     </ul>
                 </li>
             </ul>

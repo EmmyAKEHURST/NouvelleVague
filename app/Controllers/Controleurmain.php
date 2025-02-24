@@ -16,6 +16,12 @@ class Controleurmain extends BaseController
         return view('menu').view('header').view('inscription').view('footer');
     }
 
+    public function pgConnexion($action = 'pgConnexion')
+    {
+        $monmodel = new \App\Models\Monmodele();
+        return view('menu').view('header').view('connexion').view('footer');
+    }
+
     public function inscription()
     {
         $monmodel = new \App\Models\Monmodele();

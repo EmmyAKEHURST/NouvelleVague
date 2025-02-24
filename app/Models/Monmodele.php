@@ -61,15 +61,16 @@ class Monmodele extends Model{
         
         $builder = $db->table('Utilisateur');
         $builder->insert([
-        'nom' => $data['nom'],
-        'prenom' => $data['prenom'],
-        'login' => $data['login'],
-        'mail' => $data['mail'],
-        'mdp' => $data['motdepasse']
+            'nom' => $data['nom'],
+            'prenom' => $data['prenom'],
+            'login' => $data['login'],
+            'mail' => $data['mail'],
+            'mdp' => password_hash($data['motdepasse'], PASSWORD_DEFAULT)
         ]);
-
+    
         $db->close();
     }
+    
 
 }
 ?>

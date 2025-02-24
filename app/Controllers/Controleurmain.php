@@ -7,67 +7,35 @@ class Controleurmain extends BaseController
     public function index($action = 'accueil')
     {
         $monmodel = new \App\Models\Monmodele();
-        return view('menu');
+        return view('header').view('accueil');
     }
 
-    public function afficher()
-    {
-        $monmodel = new \App\Models\Monmodele();
-        $data = ['contacts' => $monmodel->getLesContacts()];
-        return view('menu').view('afficher', $data);
-    }
-
-    public function nbcontacts()
-    {
-        $monmodel = new \App\Models\Monmodele();
-        $data = ['nbContacts' => $monmodel->nbContacts()];
-        return view('menu').view('nbcontacts', $data);
-    }
-
-    public function ajouter()
-    {
-        $monmodel = new \App\Models\Monmodele();
-        return view('menu').view('ajouter');
-    }
-
-    public function ajoutervalider()
+    public function inscription()
     {
         $monmodel = new \App\Models\Monmodele();
         $rules = [
-            'nom' => 'required|max_length[50]',
             'prenom' => 'required|max_length[50]',
-            'email' => 'required|max_length[50]|valid_email',
-            'numero' => 'required|max_length[50]',
-            'commentaire' => 'max_length[255]'
+            'nom' => 'required|max_length[50]',
+            'login' => 'required|max_length[50]',
+            'mail' => 'required|valid_email',
+            'motdepasse' => [
+                'rules' => 'required|min_length[12]|regex_match[/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W]).+$/]',
+                'errors' => [
+                    'regex_match' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial.',
+                ],
+            'validermotdepasse' => 'required|matches[motdepasse]'
+            ]
         ];
-        if (!$this->validate($rules)) {
-            return view('menu').view('ajouter'); //Si les données ne sont pas valides, on retourne à la vue du formulaire avec les erreurs
-        }else{
-            $monmodel->ajouterContact($this->request->getPost());
-            return view('menu').view('ajouter');
+        if ($this->validate($rules)) {
+            if($monmodel->verifmail($this->request->getPost()) == 0){
+                $monmodel->inscriptionValider($this->request->getPost());
+                return view('header') . view('inscription');
+            }
+            else{
+                return view('header') . view('inscription');
+            }
+        } else {
+            return view('header') . view('inscription', ['errors' => $this->validator->getErrors()]);
         }
-        return view('menu').view('ajouter');
     }
-
-    public function supprimer()
-    {
-        $monmodel = new \App\Models\Monmodele();
-        return view('menu').view('supprimer');
-    }
-
-    public function supprimervalider()
-    {
-        $monmodel = new \App\Models\Monmodele();
-        $rules = [
-            'numero' => 'required|max_length[50]'
-        ];
-        if (!$this->validate($rules)) {
-            return view('menu').view('supprimer'); //Si les données ne sont pas valides, on retourne à la vue du formulaire avec les erreurs
-        }else{
-            $monmodel->supprimerContact($this->request->getPost());
-            return view('menu').view('supprimer');
-        }
-        return view('menu').view('supprimer');
-    }
-
 }

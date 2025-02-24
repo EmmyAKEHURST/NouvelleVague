@@ -7,17 +7,17 @@ use CodeIgniter\Router\RouteCollection;
  */
 
  $routes->setDefaultNamespace('App\Controllers');
- $routes->setDefaultController('Connexioncontroleur');
+ $routes->setDefaultController('Controleurmain');
  $routes->setDefaultMethod('index');
  $routes->setTranslateURIDashes(false);
  $routes->set404Override();
 
 
-$routes->get('/', 'Connexioncontroleur::index');
+$routes->get('/', 'Controleurmain::index');
 
-$routes->get('/Connexioncontroleur', 'Connexioncontroleur::index');
-$routes->post('/Connexioncontroleur/connexion', 'Connexioncontroleur::connexion');
-$routes->post('/Connexioncontroleur/inscription', 'Connexioncontroleur::inscription');
+$routes->get('/Controleurmain', 'Controleurmain::index');
+$routes->post('/Controleurmain/connexion', 'Controleurmain::connexion');
+$routes->post('/Controleurmain/inscription', 'Controleurmain::inscription');
 /*
 $routes->get('/Controleurmain', 'Controleurmain::index');
 $routes->get('Controleurmain/afficher', 'Controleurmain::afficher');

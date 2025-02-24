@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= base_url('css/menu.css'); ?>">
 </head>
 <body>
-
+    
     <nav>
         <div class="wrapper">
             <div class="logo">

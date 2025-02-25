@@ -16,21 +16,21 @@
     <nav>
         <div class="wrapper">
             <div class="logo">
-                <?= anchor('Controleurmain', '<img src="../public/img/nouvellevague.png" width="100px" alt="Logo">') ?>
+                <?= anchor('/', '<img src="' . base_url('/img/nouvellevague.png') . '" width="100px" alt="Logo">') ?>
             </div>
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                <li><?= anchor('/TempsForts', 'Temps Forts') ?></li>
-                <li><?= anchor('/MesInscriptions', 'Mes Inscriptions') ?></li>
+                <li><?= anchor('#', 'Temps Forts') ?></li>
+                <li><?= anchor('#', 'Mes Inscriptions') ?></li>
                 <li>
                     <a href="#" class="desktop-item">Authentification</a>
                     <input type="checkbox" id="showDropAuth">
                     <label for="showDropAuth" class="mobile-item">Authentification</label>
                     <ul class="drop-menu">
-                        <li><?= anchor('Controleurmain/pgInscription', 'Inscription') ?></li>
-                        <li><?= anchor('Controleurmain/pgConnexion', 'Connexion') ?></li>
+                        <li><?= anchor('/pgInscription', 'Inscription') ?></li>
+                        <li><?= anchor('/pgConnexion', 'Connexion') ?></li>
                     </ul>
                 </li>
             </ul>

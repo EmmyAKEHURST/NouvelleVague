@@ -1,0 +1,130 @@
+CRITICAL - 2025-02-25 15:57:07 --> syntax error, unexpected token "<", expecting "function" or "const"
+in APPPATH\Controllers\Controleurmain.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 15:57:46 --> syntax error, unexpected token "<", expecting "function" or "const"
+in APPPATH\Models\Monmodele.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\Controleurmain.php(11): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 15:58:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Controleurmain.php(13): CodeIgniter\Model->__call('getLesTempsForts', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 15:59:57 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Controleurmain.php(13): CodeIgniter\Model->__call('getLesTempsForts', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:04:02 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 44.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:04:38 --> Undefined variable $tempsforts
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 APPPATH\Views\accueilinfo.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsforts', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\accueilinfo.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\accueilinfo.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:05:09 --> Undefined variable $data
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 APPPATH\Views\accueilinfo.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\accueilinfo.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\accueilinfo.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:57 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:58 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:58 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:58 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:59 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:08:59 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\accueilinfo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 16:28:59 --> syntax error, unexpected token "echo", expecting ")"
+in APPPATH\Views\accueilinfo.php on line 39.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueilinfo', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(15): view('accueilinfo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

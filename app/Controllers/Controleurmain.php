@@ -3,25 +3,33 @@
 namespace App\Controllers;
 
 class Controleurmain extends BaseController
-{
+{   
+    //------------------------------------------------------------------------------------LES PAGES------------------------------------------------------------------------------------
+    //PAGE D'ACCUEIL
     public function index($action = 'index')
     {
         $monmodel = new \App\Models\Monmodele();
-        return view('menu').view('accueilheader').view('accueilinfo').view('footer');
+        $data = [
+            'tempsforts' => $monmodel->getTempsForts()
+        ];
+        return view('menu').view('accueilheader').view('accueilinfo', $data).view('footer');
     }
     
+    //PAGE D'INSCRIPTION
     public function pgInscription($action = 'pgInscription')
     {
         $monmodel = new \App\Models\Monmodele();
         return view('menu').view('header').view('inscription').view('footer');
     }
 
+    //PAGE DE CONNEXION
     public function pgConnexion($action = 'pgConnexion')
     {
         $monmodel = new \App\Models\Monmodele();
         return view('menu').view('header').view('connexion').view('footer');
     }
 
+    //------------------------------------------------------------------------------------LES FONCTIONS------------------------------------------------------------------------------------
     public function inscription()
     {
         $monmodel = new \App\Models\Monmodele();
@@ -50,4 +58,6 @@ class Controleurmain extends BaseController
             return view('menu').view('header').view('inscription').view('footer', ['errors' => $this->validator->getErrors()]);
         }
     }
+
+    
 }

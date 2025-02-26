@@ -95,7 +95,15 @@ class Controleurmain extends BaseController
                 .view('connexion', ['errors' => $this->validator->getErrors()])
                 .view('footer');
         }
-}
+    }
+
+    public function deconnexion()
+    {
+        $session = session();
+        $session->destroy(); // Supprime toutes les données de session
+        return redirect()->to('/')->with('success', 'Déconnexion réussie !');
+    }
+
 
 
 

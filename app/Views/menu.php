@@ -24,6 +24,11 @@
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li><?= anchor('#', 'Temps Forts') ?></li>
                 <li><?= anchor('#', 'Mes Inscriptions') ?></li>
+
+                <?php if (session()->get('isLoggedIn')) : ?>
+                    <!-- Si l'utilisateur est connecté, afficher Déconnexion -->
+                    <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
+                <?php else : ?>
                 <li>
                     <a href="#" class="desktop-item">Authentification</a>
                     <input type="checkbox" id="showDropAuth">
@@ -33,6 +38,7 @@
                         <li><?= anchor('/pgConnexion', 'Connexion') ?></li>
                     </ul>
                 </li>
+                <?php endif; ?>
             </ul>
             <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>

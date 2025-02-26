@@ -18,6 +18,8 @@ $routes->post('/connexion', 'Controleurmain::connexion');
 $routes->post('/inscription', 'Controleurmain::inscription');
 $routes->get('/pgInscription', 'Controleurmain::pgInscription');
 $routes->get('/pgConnexion', 'Controleurmain::pgConnexion');
+$routes->get('/deconnexion', 'Controleurmain::deconnexion');
+
 
 
 /*

@@ -91,6 +91,7 @@ class Monmodele extends Model{
         return $query->getRow(); 
     }
 
+    // Permet de recuperer l'utilisateur avec son id -->
     public function getUserById($id)
     {
         // Connexion à la base de données
@@ -103,31 +104,16 @@ class Monmodele extends Model{
         return $query->getRow();
     }
     
+    // Permet de mettre a jour le profil grace a l'id -->
     public function updateUser($id, $data)
     {
         // Connexion à la base de données
         $db = \Config\Database::connect();
         
-        // Préparation des données à mettre à jour
-        $sql = 'UPDATE utilisateur SET ';
-        $setParts = [];
-        $values = [];
-        
-        foreach ($data as $key => $value) {
-            $setParts[] = "$key = ?";
-            $values[] = $value;
-        }
-        
-        // Ajout de la condition WHERE
-        $sql .= implode(', ', $setParts);
-        $sql .= ' WHERE id = ?';
-        
-        // Ajout de l'ID à la fin des valeurs
-        $values[] = $id;
-        
-        // Exécution de la requête SQL
-        $db->query($sql, $values);
+        // Mettre à jour l'utilisateur dans la table 'utilisateur' en utilisant la méthode 'update' de CodeIgniter
+        return $db->table('utilisateur')->update($data, ['id' => $id]);
     }
+    
     
 
     

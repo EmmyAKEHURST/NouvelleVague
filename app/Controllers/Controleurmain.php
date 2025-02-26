@@ -138,7 +138,6 @@ class Controleurmain extends BaseController
 
         $monmodel->updateUser($session->get('id'), $data);
 
-        // Mettre à jour la session avec les nouvelles informations
         $session->set($data);
 
         return redirect()->to('/pgProfil')->with('success', 'Profil mis à jour avec succès.');

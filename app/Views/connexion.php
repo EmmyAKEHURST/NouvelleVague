@@ -11,7 +11,7 @@
     <h1>Connexion </h1>
     <?=validation_list_errors() ?>
     <div class="container">
-        <form action="<?= base_url('Controleurmain/connexion') ?>" method="post" novalidate>
+        <form action="<?= base_url('/connexion') ?>" method="post" novalidate>
 
             <div class="mb-3">
                 <label for="login" class="form-label">Login</label>
@@ -24,6 +24,20 @@
             </div>
             
             <button type="submit" class="btn btn-primary">Envoyer</button>
+            <?php if (isset($errors) && !empty($errors)) : ?>
+
+        <div class="alert">
+            <ul>
+                <?php foreach ($errors as $error) : ?>
+                    <li><?= esc($error) ?></li>
+                <?php endforeach; ?>
+            </ul>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->getFlashdata('success')) : ?>
+            <div class="alert"><?= esc(session()->getFlashdata('success')) ?></div>
+        <?php endif; ?>
         </form>
         </div>
     </div>

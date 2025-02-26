@@ -11,7 +11,7 @@
  <h1> Inscription : </h1>
 <?=validation_list_errors() ?>
 <div class="container">
-    <form action="<?= base_url('Controleurmain/inscription') ?>" method="post" novalidate>
+    <form action="<?= base_url('/inscription') ?>" method="post" novalidate>
         <div class="mb-3">
             <label for="nom" class="form-label">Prénom</label>
             <input type="text" class="form-control" id="prenom" name="prenom" value="<?= set_value('prenom') ?>" required>

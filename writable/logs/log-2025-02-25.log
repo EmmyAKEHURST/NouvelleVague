@@ -128,3 +128,71 @@ in APPPATH\Views\accueilinfo.php on line 39.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-25 20:55:49 --> Error connecting to the database: mysqli_sql_exception: Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-02-25 20:55:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-25 20:55:55 --> Error connecting to the database: mysqli_sql_exception: Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\app\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVAGUE\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-02-25 20:55:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(13): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

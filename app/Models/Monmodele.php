@@ -81,5 +81,17 @@ class Monmodele extends Model{
         return $results->getResultArray();
     }
 
+    // Permet de recuperer l'utilisateur avec son login -->
+    public function getUserByLogin($login)
+    {
+        $db = \Config\Database::connect();
+        $sql = "SELECT * FROM utilisateur WHERE login = ?";
+        $query = $db->query($sql, [$login]);
+        $db->close();
+        return $query->getRow(); 
+    }
+    
+
+
 }
 ?>

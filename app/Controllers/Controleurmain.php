@@ -59,5 +59,48 @@ class Controleurmain extends BaseController
         }
     }
 
+    public function connexion()
+    {
+        $monmodel = new \App\Models\Monmodele();
+        $rules = [
+            'login' => 'required',
+            'motdepasse' => 'required'
+        ];
+    
+        if ($this->validate($rules)) {
+            $user = $monmodel->getUserByLogin($this->request->getPost('login'));
+    
+            if ($user && password_verify($this->request->getPost('motdepasse'), $user->mdp)) {
+                $session = session();
+                $session->set([
+                    'id' => $user->id,
+                    'nom' => $user->nom,
+                    'prenom' => $user->prenom,
+                    'login' => $user->login,
+                    'mail' => $user->mail,
+                    'isLoggedIn' => true
+                ]);
+    
+                // Redirection vers la page d'accueil après connexion
+                return redirect()->to('/')->with('success', 'Connexion réussie !');
+            } else {
+                return view('menu')
+                    .view('header')
+                    .view('connexion', ['errors' => ['login' => 'Login ou mot de passe incorrect.']])
+                    .view('footer');
+            }
+        } else {
+            return view('menu')
+                .view('header')
+                .view('connexion', ['errors' => $this->validator->getErrors()])
+                .view('footer');
+        }
+}
+
+
+
+
+    
+
     
 }

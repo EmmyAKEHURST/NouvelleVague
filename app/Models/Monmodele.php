@@ -90,6 +90,46 @@ class Monmodele extends Model{
         $db->close();
         return $query->getRow(); 
     }
+
+    public function getUserById($id)
+    {
+        // Connexion à la base de données
+        $db = \Config\Database::connect();
+        
+        // Exécution de la requête SQL
+        $query = $db->query('SELECT * FROM utilisateur WHERE id = ?', [$id]);
+        
+        // Retourner le premier résultat
+        return $query->getRow();
+    }
+    
+    public function updateUser($id, $data)
+    {
+        // Connexion à la base de données
+        $db = \Config\Database::connect();
+        
+        // Préparation des données à mettre à jour
+        $sql = 'UPDATE utilisateur SET ';
+        $setParts = [];
+        $values = [];
+        
+        foreach ($data as $key => $value) {
+            $setParts[] = "$key = ?";
+            $values[] = $value;
+        }
+        
+        // Ajout de la condition WHERE
+        $sql .= implode(', ', $setParts);
+        $sql .= ' WHERE id = ?';
+        
+        // Ajout de l'ID à la fin des valeurs
+        $values[] = $id;
+        
+        // Exécution de la requête SQL
+        $db->query($sql, $values);
+    }
+    
+
     
 
 

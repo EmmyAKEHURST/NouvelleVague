@@ -27,6 +27,7 @@
 
                 <?php if (session()->get('isLoggedIn')) : ?>
                     <!-- Si l'utilisateur est connecté, afficher Déconnexion -->
+                    <li><?= anchor('/pgProfil', 'Mon Profil') ?></li>
                     <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
                 <?php else : ?>
                 <li>

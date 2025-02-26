@@ -6,8 +6,7 @@ class Controleurmain extends BaseController
 {   
     //------------------------------------------------------------------------------------LES PAGES------------------------------------------------------------------------------------
     //PAGE D'ACCUEIL
-    public function index($action = 'index')
-    {
+    public function index($action = 'index') {
         $monmodel = new \App\Models\Monmodele();
         $data = [
             'tempsforts' => $monmodel->getTempsForts()
@@ -16,22 +15,40 @@ class Controleurmain extends BaseController
     }
     
     //PAGE D'INSCRIPTION
-    public function pgInscription($action = 'pgInscription')
-    {
+    public function pgInscription($action = 'pgInscription') {
         $monmodel = new \App\Models\Monmodele();
         return view('menu').view('header').view('inscription').view('footer');
     }
 
     //PAGE DE CONNEXION
-    public function pgConnexion($action = 'pgConnexion')
-    {
+    public function pgConnexion($action = 'pgConnexion') {
         $monmodel = new \App\Models\Monmodele();
         return view('menu').view('header').view('connexion').view('footer');
     }
 
+    // PAGE DE PROFIL
+    public function pgProfil($action = 'pgProfil') {
+        $session = session();
+            
+    // Vérifie si l'utilisateur est connecté
+    if (!$session->get('isLoggedIn')) {
+        return redirect()->to('/pgConnexion')->with('error', 'Veuillez vous connecter.');
+    }
+            
+    // Récupérer l'utilisateur connecté depuis la session
+    $monmodel = new \App\Models\Monmodele();
+    $user = $monmodel->getUserById($session->get('id'));
+            
+    // Passer l'utilisateur à la vue
+    return view('menu')
+        .view('header')
+        .view('profil', ['user' => $user]) // Passer le id a le vue profil
+        .view('footer');
+    }
+
+
     //------------------------------------------------------------------------------------LES FONCTIONS------------------------------------------------------------------------------------
-    public function inscription()
-    {
+    public function inscription() {
         $monmodel = new \App\Models\Monmodele();
         $rules = [
             'prenom' => 'required|max_length[50]',
@@ -59,8 +76,7 @@ class Controleurmain extends BaseController
         }
     }
 
-    public function connexion()
-    {
+    public function connexion() {
         $monmodel = new \App\Models\Monmodele();
         $rules = [
             'login' => 'required',
@@ -97,12 +113,37 @@ class Controleurmain extends BaseController
         }
     }
 
-    public function deconnexion()
-    {
+    public function deconnexion() {
         $session = session();
         $session->destroy(); // Supprime toutes les données de session
         return redirect()->to('/')->with('success', 'Déconnexion réussie !');
     }
+
+
+    public function modifierProfil() {
+        $session = session();
+
+        $monmodel = new \App\Models\Monmodele();
+
+        $data = [
+            'nom' => $this->request->getPost('nom'),
+            'prenom' => $this->request->getPost('prenom'),
+            'login' => $this->request->getPost('login'),
+            'mail' => $this->request->getPost('mail')
+        ];
+
+        if (!empty($this->request->getPost('motdepasse'))) {
+            $data['mdp'] = password_hash($this->request->getPost('motdepasse'), PASSWORD_DEFAULT);
+        }
+
+        $monmodel->updateUser($session->get('id'), $data);
+
+        // Mettre à jour la session avec les nouvelles informations
+        $session->set($data);
+
+        return redirect()->to('/pgProfil')->with('success', 'Profil mis à jour avec succès.');
+    }
+
 
 
 

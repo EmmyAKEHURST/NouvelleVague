@@ -113,6 +113,40 @@ class Monmodele extends Model{
         // Mettre à jour l'utilisateur dans la table 'utilisateur' en utilisant la méthode 'update' de CodeIgniter
         return $db->table('utilisateur')->update($data, ['id' => $id]);
     }
+
+
+    public function creerTempsFort($data)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('temps_fort');
+        $builder->insert($data);
+        $db->close();
+    }
+
+
+    public function getTempsFortById($id) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('temps_fort');
+        $builder->where('id', $id);
+        $query = $builder->get();
+        return $query->getRow();
+    }
+
+    public function supprimerTempsFort($id) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('temps_fort');
+        $builder->where('id', $id);
+        return $builder->delete();
+    }
+
+    public function getAllTempsForts() {
+        return $this->db->table('temps_fort')->get()->getResult();
+    }
+    
+    
+
+    
+
     
     
 

@@ -13,23 +13,36 @@
 </head>
 <body>
     
-    <nav>
-        <div class="wrapper">
-            <div class="logo">
-                <?= anchor('/', '<img src="' . base_url('/img/nouvellevague.png') . '" width="100px" alt="Logo">') ?>
-            </div>
-            <input type="radio" name="slider" id="menu-btn">
-            <input type="radio" name="slider" id="close-btn">
-            <ul class="nav-links">
-                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                <li><?= anchor('#', 'Temps Forts') ?></li>
+<nav>
+    <div class="wrapper">
+        <div class="logo">
+            <?= anchor('/', '<img src="' . base_url('/img/nouvellevague.png') . '" width="100px" alt="Logo">') ?>
+        </div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
-                <?php if (session()->get('isLoggedIn')) : ?>
-                    <!-- Si l'utilisateur est connecté, afficher Déconnexion -->
-                    <li><?= anchor('#', 'Mes Inscriptions') ?></li>
-                    <li><?= anchor('/pgProfil', 'Mon Profil') ?></li>
-                    <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
+            <?php if (session()->get('isLoggedIn')) : ?>
+                <!-- Récupération du rôle depuis la session -->
+                <?php $role = session()->get('role'); ?>
+
+                <?php if ($role !== 'maire') : ?>
+                    <!-- Afficher "Temps Forts" si ce n'est pas un maire -->
+                    <li><?= anchor('#', 'Temps Forts') ?></li>
+                <?php endif; ?>
+
+                <?php if ($role === 'maire') : ?>
+                    <li><?= anchor('/pgConsultationInscriptions', 'Consultation des Inscriptions') ?></li>
+                    <li><?= anchor('/pgGestionTempsFort', 'Gestion Des Temps forts') ?></li>
                 <?php else : ?>
+                    <li><?= anchor('#', 'Mes Inscriptions') ?></li>
+                <?php endif; ?>
+
+                <li><?= anchor('/pgProfil', 'Mon Profil') ?></li>
+                <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
+
+            <?php else : ?>
                 <li>
                     <a href="#" class="desktop-item">Authentification</a>
                     <input type="checkbox" id="showDropAuth">
@@ -39,11 +52,11 @@
                         <li><?= anchor('/pgConnexion', 'Connexion') ?></li>
                     </ul>
                 </li>
-                <?php endif; ?>
-            </ul>
-            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-        </div>
-    </nav>
+            <?php endif; ?>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+</nav>
 
 </body>
 </html>

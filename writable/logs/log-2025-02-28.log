@@ -36,3 +36,192 @@ in APPPATH\Views\profil.php on line 22.
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-28 19:50:41 --> Error connecting to the database: mysqli_sql_exception: Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-02-28 19:50:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-28 20:17:13 --> mysqli_sql_exception: Champ 'titre' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-28 20:17:13 --> Champ 'titre' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `temps_fort` (`titre`, `description`, `date_debut`, `date_fin`, `nombre_places_max`, `img`) VALUES (:titre:, :description:, :date_debut:, :date_fin:, :nombre_places_max:, :img:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-28 20:17:30 --> mysqli_sql_exception: Champ 'titre' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-28 20:17:30 --> Champ 'titre' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `temps_fort` (`titre`, `description`, `date_debut`, `date_fin`, `nombre_places_max`, `img`) VALUES (:titre:, :description:, :date_debut:, :date_fin:, :nombre_places_max:, :img:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-28 20:22:17 --> mysqli_sql_exception: Champ 'nombre_places_max' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-28 20:22:17 --> Champ 'nombre_places_max' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `temps_fort` (`libelle`, `description`, `date_debut`, `date_fin`, `nombre_places_max`, `img`) VALUES (:libelle:, :description:, :date_debut:, :date_fin:, :nombre_places_max:, :img:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(213): App\Models\Monmodele->creerTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 20:30:01 --> syntax error, unexpected identifier "view", expecting ";"
+in APPPATH\Controllers\Controleurmain.php on line 230.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 20:31:03 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:07 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:08 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:09 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:09 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:10 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:31:12 --> Cannot redeclare App\Models\Monmodele::getTempsForts()
+in APPPATH\Models\Monmodele.php on line 126.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-02-28 20:36:10 --> Undefined variable $tempsForts
+in APPPATH\Views\afficherTempsFort.php on line 20.
+ 1 APPPATH\Views\afficherTempsFort.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsForts', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\afficherTempsFort.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\afficherTempsFort.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('afficherTempsFort', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(172): view('afficherTempsFort')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 20:37:03 --> Undefined variable $tempsForts
+in APPPATH\Controllers\Controleurmain.php on line 172.
+ 1 APPPATH\Controllers\Controleurmain.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsForts', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 172)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 20:37:42 --> Undefined variable $model
+in APPPATH\Controllers\Controleurmain.php on line 171.
+ 1 APPPATH\Controllers\Controleurmain.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 171)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-28 20:37:58 --> mysqli_sql_exception: La table 'nouvelle_vague.temps_forts' n'existe pas in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(143): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(173): App\Models\Monmodele->getAllTempsForts()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-28 20:37:58 --> La table 'nouvelle_vague.temps_forts' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `temps_forts`', [], false)
+ 2 APPPATH\Models\Monmodele.php(143): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Controleurmain.php(173): App\Models\Monmodele->getAllTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 20:38:20 --> Undefined property: stdClass::$nombre_places_max
+in APPPATH\Views\afficherTempsFort.php on line 26.
+ 1 APPPATH\Views\afficherTempsFort.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre_places_max', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\afficherTempsFort.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\afficherTempsFort.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('afficherTempsFort', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(176): view('afficherTempsFort', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

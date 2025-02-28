@@ -109,6 +109,7 @@ class Controleurmain extends BaseController
                     'prenom' => $user->prenom,
                     'login' => $user->login,
                     'mail' => $user->mail,
+                    'role' => $user->role,
                     'isLoggedIn' => true
                 ]);
     
@@ -157,6 +158,66 @@ class Controleurmain extends BaseController
 
         return redirect()->to('/pgProfil')->with('success', 'Profil mis à jour avec succès.');
     }
+
+
+        public function pgGestionTempsFort($action = 'pgGestionTempsFort') {
+
+        // Vérifier si l'utilisateur est connecté et a le rôle "maire"
+        $session = session();
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'maire') {
+            return redirect()->to('/')->with('error', 'Accès non autorisé.');
+        }
+
+        $model = new \App\Models\Monmodele();
+
+        $tempsForts = $model->getAllTempsForts();
+        
+        // Affiche le formulaire dans une vue qui inclut le menu, header et footer
+        return view('menu').view('header').view('afficherTempsFort', ['tempsForts' => $tempsForts]).view('gestionTempsFort').view('footer');
+        }
+
+
+
+        public function creerTempsFort() {
+        // Vérifier que l'utilisateur a le droit d'accéder à cette fonctionnalité
+        $session = session();
+        if (!$session->get('isLoggedIn') || $session->get('role') !== 'maire') {
+            return redirect()->to('/')->with('error', 'Accès non autorisé.');
+        }
+
+        // Définir les règles de validation
+        $rules = [
+            'libelle'              => 'required|max_length[255]',
+            'description'        => 'required',
+            'date_debut'         => 'required|valid_date',
+            'date_fin'           => 'required|valid_date',
+            'participant_max'  => 'required|integer'
+        ];
+
+        if (!$this->validate($rules)) {
+            // En cas d'erreurs, redirige en conservant les erreurs et les anciennes valeurs
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        // Récupérer les données du formulaire
+        $data = [
+            'libelle'             => $this->request->getPost('libelle'),
+            'description'       => $this->request->getPost('description'),
+            'date_debut'        => $this->request->getPost('date_debut'),
+            'date_fin'          => $this->request->getPost('date_fin'),
+            'participant_max' => $this->request->getPost('participant_max'),
+            'img'             => $this->request->getPost('img')
+        ];
+
+        // Appele le modèle pour insérer les données
+        $monmodel = new \App\Models\Monmodele();
+        $monmodel->creerTempsFort($data);
+
+        return redirect()->to('/pgGestionTempsFort')->with('success', 'Temps fort créé avec succès.');
+        }
+        
+
+
 
 
 

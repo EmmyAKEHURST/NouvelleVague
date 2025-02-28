@@ -22,7 +22,7 @@
             <p><strong>Prénom:</strong> <?= esc($user->prenom) ?></p>
             <p><strong>Login:</strong> <?= esc($user->login) ?></p>
             <p><strong>Email:</strong> <?= esc($user->mail) ?></p>
-            <p><strong>Mot de passe:</strong> ...</p>
+            <p><strong>Mot de passe:</strong>***</p>
             <br>
             <div class="bouton">
                 <?= anchor('/profilModifier', 'Modifier les informations')?>

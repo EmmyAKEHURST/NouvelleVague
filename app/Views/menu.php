@@ -23,10 +23,10 @@
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li><?= anchor('#', 'Temps Forts') ?></li>
-                <li><?= anchor('#', 'Mes Inscriptions') ?></li>
 
                 <?php if (session()->get('isLoggedIn')) : ?>
                     <!-- Si l'utilisateur est connecté, afficher Déconnexion -->
+                    <li><?= anchor('#', 'Mes Inscriptions') ?></li>
                     <li><?= anchor('/pgProfil', 'Mon Profil') ?></li>
                     <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
                 <?php else : ?>

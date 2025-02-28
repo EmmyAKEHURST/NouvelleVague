@@ -28,7 +28,7 @@ class Database extends Config
         'DSN' => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => '',
+        'password' => 'root',
         'database' => 'nouvelle_vague',
         'DBDriver' => 'MySQLi',
         'DBPrefix'     => '',

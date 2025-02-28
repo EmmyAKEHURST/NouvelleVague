@@ -1,0 +1,38 @@
+CRITICAL - 2025-02-28 16:27:14 --> Invalid file: "erreur.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('erreur.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('erreur', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(77): view('erreur')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscription()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 16:27:30 --> Invalid file: "erreur.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('erreur.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('erreur', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(77): view('erreur')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscription()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 16:27:57 --> Invalid file: "erreur.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('erreur.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('erreur', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(77): view('erreur')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscription()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-28 17:50:31 --> Undefined property: stdClass::$motdepasse
+in APPPATH\Views\profil.php on line 22.
+ 1 APPPATH\Views\profil.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$motdepasse', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\profil.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\profil.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('profil', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(40): view('profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgProfil()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

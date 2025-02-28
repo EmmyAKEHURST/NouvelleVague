@@ -6,7 +6,15 @@
     <title>Formulaire</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body>   
+    <?php // Message de succès après modification du profil
+    if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+    <?php else:?>
+        <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
+    <?php endif; ?>
+
+
 <!-- Formulaire -->
  <h1> Inscription : </h1>
 <?=validation_list_errors() ?>

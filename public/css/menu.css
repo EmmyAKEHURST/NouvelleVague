@@ -431,13 +431,10 @@ nav input{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
   transition: all 0.5s ease;
   width: 70%;
-}
-
-.info-container:hover{
-  scale: 1.03;
 }
 
 .info-container p{
@@ -750,3 +747,24 @@ section {
   opacity:0.6;
 }
 
+.validation-div{
+  width: 70%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgb(96, 215, 106);
+  color: rgb(21, 19, 19);
+}
+
+.erreur-div{
+  width: 70%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgb(215, 96, 96);
+  color: rgb(21, 19, 19);
+}

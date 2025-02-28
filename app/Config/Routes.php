@@ -21,6 +21,7 @@ $routes->get('/pgConnexion', 'Controleurmain::pgConnexion');
 $routes->get('/deconnexion', 'Controleurmain::deconnexion');
 $routes->get('/pgProfil', 'Controleurmain::pgProfil');
 $routes->post('/profil/modifier', 'Controleurmain::modifierProfil');
+$routes->get('/profilModifier', 'Controleurmain::profilModifier');
 
 
 

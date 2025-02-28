@@ -29,21 +29,31 @@ class Controleurmain extends BaseController
     // PAGE DE PROFIL
     public function pgProfil($action = 'pgProfil') {
         $session = session();
-            
-    // Vérifie si l'utilisateur est connecté
-    if (!$session->get('isLoggedIn')) {
-        return redirect()->to('/pgConnexion')->with('error', 'Veuillez vous connecter.');
+        // Vérifie si l'utilisateur est connecté
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('/pgConnexion')->with('error', 'Veuillez vous connecter.');
+        }   
+        // Récupérer l'utilisateur connecté depuis la session
+        $monmodel = new \App\Models\Monmodele();
+        $user = $monmodel->getUserById($session->get('id'));     
+        // Passer l'utilisateur à la vue
+        return view('menu').view('header').view('profil', ['user' => $user]) // Passer le id a le vue profil
+            .view('footer');
     }
-            
-    // Récupérer l'utilisateur connecté depuis la session
-    $monmodel = new \App\Models\Monmodele();
-    $user = $monmodel->getUserById($session->get('id'));
-            
-    // Passer l'utilisateur à la vue
-    return view('menu')
-        .view('header')
-        .view('profil', ['user' => $user]) // Passer le id a le vue profil
-        .view('footer');
+
+    // PAGE MODIFICATION DU PROFIL
+    public function profilModifier($action = 'profilModifier') {
+        $session = session();
+        // Vérifie si l'utilisateur est connecté
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to('/pgConnexion')->with('error', 'Veuillez vous connecter.');
+        }
+        // Récupérer l'utilisateur connecté depuis la session
+        $monmodel = new \App\Models\Monmodele();
+        $user = $monmodel->getUserById($session->get('id'));
+        // Passer l'utilisateur à la vue
+        return view('menu').view('header').view('profilModifier', ['user' => $user])
+            .view('footer');
     }
 
 
@@ -58,18 +68,23 @@ class Controleurmain extends BaseController
             'motdepasse' => [
                 'rules' => 'required|min_length[12]|regex_match[/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W]).+$/]',
                 'errors' => [
-                    'regex_match' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial.',
-                ],
-            'validermotdepasse' => 'required|matches[motdepasse]'
+                    'regex_match' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial, et faire au minimum 12 caractères.',
+                ]
+            ],
+            'validermotdepasse' => [
+                'rules' => 'required|matches[motdepasse]',
+                'errors' => [
+                    'matches' => 'Les mots de passe ne correspondent pas.'
+                ]
             ]
-        ];
+        ];        
         if ($this->validate($rules)) {
             if($monmodel->verifmail($this->request->getPost()) == 0){
                 $monmodel->inscriptionValider($this->request->getPost());
-                return view('menu').view('header').view('inscription').view('footer');
+                return redirect()->to('/pgInscription')->with('success', 'Compte créé avec succès.');
             }
             else{
-                return view('menu').view('header').view('inscription').view('footer');
+                return redirect()->to('/pgInscription')->with('danger', 'Mail déjà utilisé.');
             }
         } else {
             return view('menu').view('header').view('inscription').view('footer', ['errors' => $this->validator->getErrors()]);
@@ -136,7 +151,7 @@ class Controleurmain extends BaseController
             $data['mdp'] = password_hash($this->request->getPost('motdepasse'), PASSWORD_DEFAULT);
         }
 
-        $monmodel->updateUser($session->get('id'), $data);
+        $monmodel->updateUser($session->get('id'), $data); // met à jour les informations de l'utilisateur dans la base de données en utilisant son ID stocké dans la session.
 
         $session->set($data);
 

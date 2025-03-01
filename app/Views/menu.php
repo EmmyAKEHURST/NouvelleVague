@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="<?= base_url('css/menu.css'); ?>">
 </head>
 <body>
-    
+    <!-- Récupération du rôle depuis la session -->
+    <?php $role = session()->get('role'); ?>
 <nav>
     <div class="wrapper">
         <div class="logo">
@@ -24,13 +25,6 @@
             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
 
             <?php if (session()->get('isLoggedIn')) : ?>
-                <!-- Récupération du rôle depuis la session -->
-                <?php $role = session()->get('role'); ?>
-
-                <?php if ($role !== 'maire') : ?>
-                    <!-- Afficher "Temps Forts" si ce n'est pas un maire -->
-                    <li><?= anchor('#', 'Temps Forts') ?></li>
-                <?php endif; ?>
 
                 <?php if ($role === 'maire') : ?>
                     <li><?= anchor('/pgConsultationInscriptions', 'Consultation des Inscriptions') ?></li>
@@ -43,6 +37,7 @@
                 <li><?= anchor('/deconnexion', 'Déconnexion') ?></li>
 
             <?php else : ?>
+                <li><?= anchor('#', 'Temps Forts') ?></li>
                 <li>
                     <a href="#" class="desktop-item">Authentification</a>
                     <input type="checkbox" id="showDropAuth">

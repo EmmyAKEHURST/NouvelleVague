@@ -32,3 +32,119 @@ in SYSTEMPATH\Database\BaseConnection.php on line 428.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 12:52:19 --> Invalid file: "tempsForts.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tempsForts.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('tempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 12:52:41 --> Invalid file: "tempsForts.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tempsForts.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('tempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 12:53:05 --> Invalid file: "tempsForts.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tempsForts.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('tempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 14:18:05 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+in APPPATH\Views\pgTempsForts.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 14:18:09 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+in APPPATH\Views\pgTempsForts.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 14:18:20 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+in APPPATH\Views\pgTempsForts.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 14:19:14 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+in APPPATH\Views\pgTempsForts.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 14:24:02 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+in APPPATH\Views\pgTempsForts.php on line 20.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:41:54 --> Undefined variable $user_id
+in APPPATH\Views\pgTempsForts.php on line 29.
+ 1 APPPATH\Views\pgTempsForts.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_id', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\pgTempsForts.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\pgTempsForts.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 17:58:15 --> Invalid file: "pgTempsForts.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pgTempsForts.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('pgTempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('pgTempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgTempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 17:59:33 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 17:59:58 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:00:01 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:00:18 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:00:25 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:00:25 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:00:36 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-01 18:01:57 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
+in APPPATH\Controllers\Controleurmain.php on line 180.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

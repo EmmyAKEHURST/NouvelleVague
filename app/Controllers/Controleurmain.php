@@ -56,6 +56,23 @@ class Controleurmain extends BaseController
             .view('footer');
     }
 
+    // PAGE CONSULTATIONS TEMPS FORTS
+    public function tempsForts($action = 'tempsForts') {
+        $monmodel = new \App\Models\Monmodele();
+        $data = [
+            'tempsforts' => $monmodel->getTempsForts()
+        ];
+        return view('menu').view('header').view('tempsForts', $data).view('footer');
+    }
+
+    // PAGE INSCRIPTION TEMPS FORT
+    public function tempsFortInscription($action = 'tempsFortsInscription') {
+        $monmodel = new \App\Models\Monmodele();
+        $id = $this->request->getPost('id');
+        $libelle = $this->request->getPost('libelle');
+        return view('menu').view('header').view('tempsFortsInscription', ['tempsFort' => $tempsFort, 'libelle' => $libelle]).view('footer');
+    }
+
 
     //------------------------------------------------------------------------------------LES FONCTIONS------------------------------------------------------------------------------------
     public function inscription() {
@@ -159,7 +176,14 @@ class Controleurmain extends BaseController
         return redirect()->to('/pgProfil')->with('success', 'Profil mis à jour avec succès.');
     }
 
+    public function inscriptionTempsFort($idUser, $idTempsfort){
+        $session = session();
+        $monmodel = new \App\Models\Monmodele();
+        $monmodel->inscriptionTempsFort($idUser, $idTempsfort);
+        return redirect()->to('/tempsForts')->with('success', 'Inscription réussie.');
+    }
 
+    // MAIRE
         public function pgGestionTempsFort($action = 'pgGestionTempsFort') {
 
         // Vérifier si l'utilisateur est connecté et a le rôle "maire"

@@ -114,6 +114,14 @@ class Monmodele extends Model{
         return $db->table('utilisateur')->update($data, ['id' => $id]);
     }
 
+    // Permet de s'incrire à un temps fort
+    public function inscriptionTempsFort($data)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('inscription');
+        $builder->insert($data);
+        $db->close();
+    }
 
     public function creerTempsFort($data)
     {

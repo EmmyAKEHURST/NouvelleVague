@@ -26,7 +26,7 @@
                     <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                     
                     <!-- Lien visible pour tous -->
-                    <li><?= anchor('/pgTempsForts', 'Temps Forts') ?></li>
+                    <li><?= anchor('/tempsForts', 'Temps Forts') ?></li>
                     
                     <?php if (session()->get('isLoggedIn')) : ?>
                         
@@ -56,7 +56,6 @@
                         </li>
                     <?php endif; ?>
                 </ul>
-                
                 <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
             </div>
         </nav>

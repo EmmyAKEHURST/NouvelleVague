@@ -16,6 +16,7 @@
 
         <div class="info-container">
             <h2>Bienvenue, <?= esc($user->prenom) ?> <?= esc($user->nom) ?></h2>
+            <p>Ici, tu as accès aux informations de ton compte, tu peux également les modifier si nécéssaire !</p>
             <br>
             <br>
             <p><strong>Nom:</strong> <?= esc($user->nom) ?></p>

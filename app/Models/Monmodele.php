@@ -151,6 +151,15 @@ class Monmodele extends Model{
         return $this->db->table('temps_fort')->get()->getResult();
     }
     
+    public function updateTempsFort($id, $data) {
+        return $this->db->table('temps_fort')->where('id', $id)->update($data);
+    }
+    
+    public function deleteTempsFort($id) {
+        return $this->db->table('temps_fort')->where('id', $id)->delete();
+    }
+    
+    
     
 
     

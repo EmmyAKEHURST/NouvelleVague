@@ -26,6 +26,9 @@ $routes->get('/pgGestionTempsFort', 'Controleurmain::pgGestionTempsFort');
 $routes->post('/creerTempsFort', 'Controleurmain::creerTempsFort');
 $routes->get('/tempsForts', 'Controleurmain::tempsForts');
 $routes->post('/tempsFortInscription', 'Controleurmain::tempsFortInscription');
+$routes->get('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
+$routes->post('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
+$routes->get('/supprimerTempsFort/(:num)', 'Controleurmain::supprimerTempsFort/$1');
 
 
 

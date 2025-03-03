@@ -203,6 +203,12 @@ class Controleurmain extends BaseController
     
 
 
+
+
+
+
+
+
     // MAIRE
         public function pgGestionTempsFort($action = 'pgGestionTempsFort') {
 
@@ -259,6 +265,71 @@ class Controleurmain extends BaseController
 
         return redirect()->to('/pgGestionTempsFort')->with('success', 'Temps fort créé avec succès.');
         }
+
+        public function modifierTempsFort($id) {
+            $session = session();
+        
+            if (!$session->get('isLoggedIn') || $session->get('role') !== 'maire') {
+                return redirect()->to('/')->with('error', 'Accès non autorisé.');
+            }
+        
+            $monmodel = new \App\Models\Monmodele();
+        
+            if ($this->request->getMethod() === 'post') {
+                // Traitement de la modification
+                $rules = [
+                    'libelle'        => 'required|max_length[255]',
+                    'description'    => 'required',
+                    'date_debut'     => 'required|valid_date',
+                    'date_fin'       => 'required|valid_date',
+                    'participant_max'=> 'required|integer'
+                ];
+        
+                if (!$this->validate($rules)) {
+                    return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+                }
+        
+                $data = [
+                    'libelle'        => $this->request->getPost('libelle'),
+                    'description'    => $this->request->getPost('description'),
+                    'date_debut'     => $this->request->getPost('date_debut'),
+                    'date_fin'       => $this->request->getPost('date_fin'),
+                    'participant_max'=> $this->request->getPost('participant_max')
+                ];
+        
+                $monmodel->updateTempsFort($id, $data);
+        
+                return redirect()->to('/pgGestionTempsFort')->with('success', 'Temps fort modifié avec succès.');
+            } else {
+                // Affichage du formulaire avec les données actuelles
+                $tempsFort = $monmodel->getTempsFortById($id);
+        
+                if (!$tempsFort) {
+                    return redirect()->to('/pgGestionTempsFort')->with('error', 'Temps fort introuvable.');
+                }
+        
+                return view('menu').view('header').view('modifierTempsFort', ['tempsFort' => $tempsFort]).view('footer');
+            }
+        }
+
+        public function supprimerTempsFort($id) {
+            $session = session();
+        
+            if (!$session->get('isLoggedIn') || $session->get('role') !== 'maire') {
+                return redirect()->to('/')->with('error', 'Accès non autorisé.');
+            }
+        
+            $monmodel = new \App\Models\Monmodele();
+        
+            if ($monmodel->deleteTempsFort($id)) {
+                return redirect()->to('/pgGestionTempsFort')->with('success', 'Temps fort supprimé avec succès.');
+            } else {
+                return redirect()->to('/pgGestionTempsFort')->with('error', 'Impossible de supprimer le temps fort.');
+            }
+        }
+        
+        
+
         
 
 

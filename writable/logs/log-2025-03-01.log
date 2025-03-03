@@ -148,3 +148,60 @@ in APPPATH\Controllers\Controleurmain.php on line 180.
 CRITICAL - 2025-03-01 18:01:57 --> Cannot redeclare App\Controllers\Controleurmain::inscriptionTempsFort()
 in APPPATH\Controllers\Controleurmain.php on line 180.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-03-01 18:39:28 --> Error connecting to the database: mysqli_sql_exception: Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-03-01 18:39:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(79): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-01 18:50:26 --> mysqli_sql_exception: La table 'nouvelle_vague.tempsforts' n'existe pas in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(159): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(307): App\Models\Monmodele->deleteTempsFort('3')
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->supprimerTempsFort('3')
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-01 18:50:26 --> La table 'nouvelle_vague.tempsforts' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tempsforts`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(159): CodeIgniter\Database\BaseBuilder->delete()
+ 3 APPPATH\Controllers\Controleurmain.php(307): App\Models\Monmodele->deleteTempsFort('3')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->supprimerTempsFort('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

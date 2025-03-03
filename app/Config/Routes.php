@@ -25,8 +25,7 @@ $routes->get('/profilModifier', 'Controleurmain::profilModifier');
 $routes->get('/pgGestionTempsFort', 'Controleurmain::pgGestionTempsFort');
 $routes->post('/creerTempsFort', 'Controleurmain::creerTempsFort');
 $routes->get('/tempsForts', 'Controleurmain::tempsForts');
-$routes->post('/tempsFortsInscription', 'Controleurmain::tempsFortsInscription');
-$routes->post('/inscriptionEnvoieTF', 'Controleurmain::inscriptionEnvoieTF');
+$routes->post('/tempsFortInscription', 'Controleurmain::tempsFortInscription');
 
 
 

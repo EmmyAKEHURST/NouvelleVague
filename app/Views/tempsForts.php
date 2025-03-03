@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
     <body>
+        <?php // Message de succès après modification du profil
+            if (session()->getFlashdata('success')) : ?>
+                <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+            <?php elseif (session()->getFlashdata('danger')):?>
+                <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
+            <?php endif; 
+        ?>
         <div class="info-container">
             <h2>Temps Forts</h2>
             <p>Envie de découvrir cette magnifique ville qu'est Getset-Sur-Mer ? Inscrivez-vous à un temps fort !</p>
@@ -30,6 +37,9 @@
                             <form action="<?= site_url('/tempsFortsInscription') ?>" method="post">
                                 <input type="hidden" name="id" value="<?= htmlspecialchars($tempsfort['id']) ?>">
                                 <input type="hidden" name="libelle" value="<?= htmlspecialchars($tempsfort['libelle']) ?>">
+                                <input type="hidden" name="participant_max" value="<?= htmlspecialchars($tempsfort['participant_max']) ?>">
+                                <input type="hidden" name="date_debut" value="<?= htmlspecialchars($tempsfort['date_debut']) ?>">
+                                <input type="hidden" name="date_fin" value="<?= htmlspecialchars($tempsfort['date_fin']) ?>">
                                 <button type="submit">S'inscrire...</button>
                             </form>
                         </div>

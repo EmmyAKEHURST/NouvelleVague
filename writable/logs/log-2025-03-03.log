@@ -1,0 +1,532 @@
+CRITICAL - 2025-03-03 19:54:26 --> Undefined variable $tempsFort
+in APPPATH\Controllers\Controleurmain.php on line 73.
+ 1 APPPATH\Controllers\Controleurmain.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFort', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 73)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 19:56:08 --> Undefined variable $tempsfort
+in APPPATH\Views\tempsFortsInscription.php on line 10.
+ 1 APPPATH\Views\tempsFortsInscription.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsfort', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:20:31 --> syntax error, unexpected token ";"
+in APPPATH\Views\tempsFortsInscription.php on line 21.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:21:01 --> syntax error, unexpected token ";"
+in APPPATH\Views\tempsFortsInscription.php on line 21.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:27:05 --> Undefined variable $date_debut
+in APPPATH\Views\tempsFortsInscription.php on line 21.
+ 1 APPPATH\Views\tempsFortsInscription.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $date_debut', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:28:11 --> Undefined variable $datedebut
+in APPPATH\Views\tempsFortsInscription.php on line 21.
+ 1 APPPATH\Views\tempsFortsInscription.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datedebut', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:30:15 --> Undefined variable $debutfin
+in APPPATH\Views\tempsFortsInscription.php on line 28.
+ 1 APPPATH\Views\tempsFortsInscription.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $debutfin', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 20:38:41 --> Undefined variable $datedebut
+in APPPATH\Views\tempsFortsInscription.php on line 11.
+ 1 APPPATH\Views\tempsFortsInscription.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datedebut', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 21:01:48 --> syntax error, unexpected token ")", expecting variable or "{" or "$"
+in APPPATH\Controllers\Controleurmain.php on line 190.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:25:17 --> mysqli_sql_exception: Champ 'idUser' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:25:17 --> Champ 'idUser' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`idUser`, `idTempsfort`, `accompagnateur`, `date`) VALUES (:idUser:, :idTempsfort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:37:44 --> mysqli_sql_exception: Duplicata du champ '11-5' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:37:44 --> Duplicata du champ '11-5' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:38:25 --> mysqli_sql_exception: Duplicata du champ '11-5' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:38:25 --> Duplicata du champ '11-5' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(122): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:48:25 --> mysqli_sql_exception: Duplicata du champ '11-5-2025-02-22' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(124): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:48:25 --> Duplicata du champ '11-5-2025-02-22' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(124): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:51:23 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:51:23 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 21:52:02 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 21:52:02 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:03:09 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:03:09 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 22:05:24 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Controleurmain.php(191): CodeIgniter\Model->__call('inscriptionEnvoieTF', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:07:40 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:07:40 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:08:03 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:08:03 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(191): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:08:55 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:08:55 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:13:15 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:13:15 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:14:13 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:14:13 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:15:12 --> mysqli_sql_exception: Erreur de syntaxe près de '0) VALUES (:0:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(false)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(false)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:15:12 --> Erreur de syntaxe près de '0) VALUES (:0:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (0) VALUES (:0:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(false)
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(false)
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:18:09 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND id_utilisateur = ? AND date = ?' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(191): App\Models\Monmodele->verifInscriptionTempsFort(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 22:18:09 --> Erreur de syntaxe près de '? AND id_utilisateur = ? AND date = ?' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as nb FROM reservation where id_temps_fort = ? AND id_utilisateur = ? AND date = ?', [...])
+ 2 APPPATH\Controllers\Controleurmain.php(191): App\Models\Monmodele->verifInscriptionTempsFort([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:20:04 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:20:04 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:20:36 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:20:36 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:21:05 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND id_utilisateur = ? AND date = ?' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->verifInscriptionTempsFort(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 22:21:05 --> Erreur de syntaxe près de '? AND id_utilisateur = ? AND date = ?' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as nb FROM reservation where id_temps_fort = ? AND id_utilisateur = ? AND date = ?', [...])
+ 2 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->verifInscriptionTempsFort([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:21:31 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND 'id_utilisateur' = ? AND 'date' = ?' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(190): App\Models\Monmodele->verifInscriptionTempsFort(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 22:21:31 --> Erreur de syntaxe près de '? AND 'id_utilisateur' = ? AND 'date' = ?' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(147): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as nb FROM reservation where \'id_temps_fort\' = ? AND \'id_utilisateur\' = ? AND \'date\' = ?', [...])
+ 2 APPPATH\Controllers\Controleurmain.php(190): App\Models\Monmodele->verifInscriptionTempsFort([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:22:51 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(194): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:22:51 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(194): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 22:29:09 --> mysqli_sql_exception: Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(193): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-03 22:29:09 --> Duplicata du champ '11-3-2025-02-19' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(125): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(193): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

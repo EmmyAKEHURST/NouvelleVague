@@ -10,7 +10,7 @@
     <?php // Message de succès après modification du profil
     if (session()->getFlashdata('success')) : ?>
         <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
-    <?php else:?>
+    <?php elseif (session()->getFlashdata('danger')):?>
         <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
     <?php endif; ?>
 

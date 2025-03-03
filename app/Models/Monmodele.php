@@ -118,10 +118,38 @@ class Monmodele extends Model{
     public function inscriptionTempsFort($data)
     {
         $db = \Config\Database::connect();
-        $builder = $db->table('inscription');
-        $builder->insert($data);
-        $db->close();
+        $builder = $db->table('reservation');
+        $resultat = false;
+    
+        try {
+            $builder->insert($data);
+            $resultat = $db->affectedRows() > 0;
+        } catch (\Exception $e) {
+            log_message('error', 'Erreur insertion réservation: ' . $e->getMessage());
+        } finally {
+            $db->close();
+        }
+    
+        return $resultat;
     }
+
+    public function verifInscriptionTempsFort($data){
+        $db = \Config\Database::connect();
+    
+        $sql = "SELECT COUNT(*) as nb FROM reservation WHERE id_temps_fort = ? AND id_utilisateur = ? AND date = ?";
+        $query = $db->query($sql, [
+            $data['id_temps_fort'],
+            $data['id_utilisateur'],
+            $data['date']
+        ]);
+    
+        $row = $query->getRow(); //retourne le nombre de lignes
+        $nbInscriptions = $row ? $row->nb : 0; //si aucune ligne n'est retournée, on retourne 0
+    
+        return $nbInscriptions;
+    }
+    
+
 
     public function creerTempsFort($data)
     {

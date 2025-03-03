@@ -66,11 +66,11 @@ class Controleurmain extends BaseController
     }
 
     // PAGE INSCRIPTION TEMPS FORT
-    public function tempsFortInscription($action = 'tempsFortsInscription') {
+    public function tempsFortsInscription($action = 'tempsFortsInscription') {
         $monmodel = new \App\Models\Monmodele();
         $id = $this->request->getPost('id');
         $libelle = $this->request->getPost('libelle');
-        return view('menu').view('header').view('tempsFortsInscription', ['tempsFort' => $tempsFort, 'libelle' => $libelle]).view('footer');
+        return view('menu').view('header').view('tempsFortsInscription', ['id' => $id, 'libelle' => $libelle]).view('footer');
     }
 
 
@@ -176,12 +176,32 @@ class Controleurmain extends BaseController
         return redirect()->to('/pgProfil')->with('success', 'Profil mis à jour avec succès.');
     }
 
-    public function inscriptionTempsFort($idUser, $idTempsfort){
+    public function inscriptionEnvoieTF(){ 
         $session = session();
         $monmodel = new \App\Models\Monmodele();
-        $monmodel->inscriptionTempsFort($idUser, $idTempsfort);
-        return redirect()->to('/tempsForts')->with('success', 'Inscription réussie.');
+        
+        $data = [
+            'id_utilisateur' => $session->get('id'),
+            'id_temps_fort' => $this->request->getPost('idTempsFort'),
+            'accompagnateur' => $this->request->getPost('accompagnateur'),
+            'date' => $this->request->getPost('date')
+        ];
+    
+        // Vérifier si l'utilisateur est déjà inscrit
+        if ($monmodel->verifInscriptionTempsFort($data) > 0) {
+            return redirect()->to('/tempsForts')->with('danger', 'Inscription échouée ! Vous êtes déjà inscrit à ce temps fort pour la même date.');
+        }
+    
+        // Insérer la réservation
+        if ($monmodel->inscriptionTempsFort($data)) {
+            return redirect()->to('/tempsForts')->with('success', 'Inscription réussie !');
+        } else {
+            return redirect()->to('/tempsForts')->with('danger', 'Erreur lors de l\'inscription.');
+        }
     }
+    
+    
+
 
     // MAIRE
         public function pgGestionTempsFort($action = 'pgGestionTempsFort') {

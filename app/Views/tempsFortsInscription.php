@@ -6,43 +6,34 @@
     <title>Document</title>
 </head>
     <body>
-            <!-- Formulaire -->
-        <h1> Inscription au temps fort " <?= htmlspecialchars($tempsfort['libelle']) ?> " : </h1>
+
+    <?php
+        $datedebut = $_POST['date_debut'] ?? '';
+        $datefin = $_POST['date_fin'] ?? '';
+        $libelle = $_POST['libelle'] ?? 'Événement inconnu';
+        $id = $_POST['id'] ?? '';
+        //var_dump($datedebut, $datefin);
+    ?>
+        <!-- Formulaire -->
+        <h1> Inscription au temps fort " <?= htmlspecialchars($libelle) ?> " : </h1>
         <?=validation_list_errors() ?>
         <div class="container">
-            <form action="<?= base_url('/inscription') ?>" method="post" novalidate>
+            <form action="<?= base_url('/inscriptionEnvoieTF') ?>" method="post">
                 <div class="mb-3">
-                    <label for="nom" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" name="prenom" value="<?= set_value('prenom') ?>" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" name="nom" value="<?= set_value('nom') ?>" required>
+                    <label for="accompagnateurs" class="form-label">Nombre d'accompagnateurs</label>
+                    <input type="number" class="form-control" id="accompagnateur" name="accompagnateur" value="<?= set_value('accompagnateur') ?>" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="login" class="form-label">Login</label>
-                    <input type="text" class="form-control" id="login" name="login" value="<?= set_value('login') ?>" required>
+                    <label for="motdepasse" class="form-label">Date souhaitée</label>
+                    <input type="date" class="form-control" id="date" name="date" required min="<?= htmlspecialchars($datedebut) ?>" max="<?= htmlspecialchars($datefin) ?>">
                 </div>
 
-                <div class="mb-3">
-                    <label for="mail" class="form-label">E-mail</label>
-                    <input type="text" class="form-control" id="mail" name="mail" value="<?= set_value('mail') ?>" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="motdepasse" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="motdepasse" name="motdepasse" value="<?= set_value('motdepasse') ?>" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="motdepasse" class="form-label">Valider votre mot de passe</label>
-                    <input type="password" class="form-control" id="validermotdepasse" name="validermotdepasse" value="<?= set_value('validermotdepasse') ?>" required>
-                </div>
+                <input type="hidden" name="idTempsFort" value="<?= htmlspecialchars($id) ?>">
                 
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
         </div>
+    </div>
     </body>
 </html>

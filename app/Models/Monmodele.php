@@ -116,22 +116,39 @@ class Monmodele extends Model{
 
     // Permet de s'incrire à un temps fort
     public function inscriptionTempsFort($data)
-    {
-        $db = \Config\Database::connect();
-        $builder = $db->table('reservation');
-        $resultat = false;
+{
+    $db = \Config\Database::connect();
+    $builder = $db->table('reservation');
+    $resultat = false;
     
-        try {
-            $builder->insert($data);
-            $resultat = $db->affectedRows() > 0;
-        } catch (\Exception $e) {
-            log_message('error', 'Erreur insertion réservation: ' . $e->getMessage());
-        } finally {
-            $db->close();
+    try {
+        $builder->insert($data);
+        $resultat = $db->affectedRows() > 0;
+
+        if ($resultat) { 
+            
+            $id_temps_fort = $data['id_temps_fort'];
+            $nbAccompagnateurs = isset($data['accompagnateur']) ? (int) $data['accompagnateur'] : 0;
+            
+            //calculer le nombre total de participants à soustraire (utilisateur + accompagnateurs)
+            $placesReservees = 1 + $nbAccompagnateurs;
+
+            // Mettre à jour le nombre de places restantes
+            $db->query("
+                UPDATE temps_fort 
+                SET participant_max = GREATEST(participant_max - ?, 0) 
+                WHERE id = ?
+            ", [$placesReservees, $id_temps_fort]); //GREATEST permet de ne pas descendre en dessous de 0
         }
-    
-        return $resultat;
+    } catch (\Exception $e) {
+        log_message('error', 'Erreur insertion réservation: ' . $e->getMessage());
+    } finally {
+        $db->close();
     }
+
+    return $resultat;
+}
+
 
     public function verifInscriptionTempsFort($data){
         $db = \Config\Database::connect();
@@ -148,7 +165,6 @@ class Monmodele extends Model{
     
         return $nbInscriptions;
     }
-    
 
 
     public function creerTempsFort($data)

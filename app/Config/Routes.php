@@ -32,7 +32,6 @@ $routes->post('/inscriptionEnvoieTF', 'Controleurmain::inscriptionEnvoieTF');
 
 
 
-
 /*
 $routes->get('/Controleurmain', 'Controleurmain::index');
 $routes->get('Controleurmain/afficher', 'Controleurmain::afficher');

@@ -29,6 +29,9 @@ $routes->post('/tempsFortInscription', 'Controleurmain::tempsFortInscription');
 $routes->get('/tempsForts', 'Controleurmain::tempsForts');
 $routes->post('/tempsFortsInscription', 'Controleurmain::tempsFortsInscription');
 $routes->post('/inscriptionEnvoieTF', 'Controleurmain::inscriptionEnvoieTF');
+$routes->get('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
+$routes->post('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
+$routes->get('/supprimerTempsFort/(:num)', 'Controleurmain::supprimerTempsFort/$1');
 
 
 

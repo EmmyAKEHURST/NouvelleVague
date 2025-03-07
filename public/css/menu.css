@@ -378,6 +378,7 @@ nav input{
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../img/header.jpg');
+  margin-bottom: 50px;
 }
 
 .title-container{
@@ -433,7 +434,11 @@ nav input{
   justify-content: center;
   position: relative;
   transition: all 0.5s ease;
-  width: 70%;
+  width: 88%;
+}
+
+#no{
+  margin-top: 0px !important;
 }
 
 .info-container p{
@@ -442,8 +447,13 @@ nav input{
   text-align: center;
   margin: 0;
   padding: 0;
-  text-align: center;
   width: 80%;
+}
+
+#p2{
+  text-align: justify !important;
+  width: 100%;
+  font-size: 18px;
 }
 
 .info-container h2{
@@ -772,7 +782,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   margin-top: 50px;
   width: 100%;
   position: relative;
@@ -804,4 +813,8 @@ section {
   margin-top: 20px;
   text-align: center;
   color: rgba(0, 0, 0, 0.5)
+}
+
+.table{
+  width: 60% !important;
 }

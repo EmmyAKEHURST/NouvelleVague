@@ -14,7 +14,7 @@
         <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
     <?php endif; ?>
 
-        <div class="info-container">
+        <div class="info-container" id="no">
             <h2>Bienvenue, <?= esc($user->prenom) ?> <?= esc($user->nom) ?></h2>
             <p>Ici, tu as accès aux informations de ton compte, tu peux également les modifier si nécéssaire !</p>
             <br>

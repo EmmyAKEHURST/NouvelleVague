@@ -13,7 +13,7 @@
                 <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
             <?php endif; 
         ?>
-        <div class="info-container">
+        <div class="info-container" id="no">
             <h2>Temps Forts</h2>
             <p>Envie de découvrir cette magnifique ville qu'est Getset-Sur-Mer ? Inscrivez-vous à un temps fort !</p>
         </div>

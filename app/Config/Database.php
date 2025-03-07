@@ -26,9 +26,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN' => '',
-        'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
+        'hostname' => '172.16.203.206',
+        'username' => 'sio',
+        'password' => 'Vanille2010',
         'database' => 'nouvelle_vague',
         'DBDriver' => 'MySQLi',
         'DBPrefix'     => '',

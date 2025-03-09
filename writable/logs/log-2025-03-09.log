@@ -1,0 +1,524 @@
+ERROR - 2025-03-09 11:40:24 --> Error connecting to the database: mysqli_sql_exception: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('172.16.203.206', 'sio', 'Vanille2010', 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(38): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(38): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-03-09 11:40:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(38): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:56:38 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:56:41 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:57:26 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:58:34 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:58:35 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:58:49 --> syntax error, unexpected identifier "pgConsultationInscriptions", expecting variable
+in APPPATH\Controllers\Controleurmain.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 11:59:48 --> Invalid file: "voirinscription.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('voirinscription.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('voirinscription', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(82): view('voirinscription', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:02:05 --> Undefined array key "img"
+in APPPATH\Views\voirinscriptions.php on line 26.
+ 1 APPPATH\Views\voirinscriptions.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "img"', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('voirinscriptions', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(82): view('voirinscriptions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:32:25 --> Attempt to read property "id_temps_fort" on array
+in APPPATH\Controllers\Controleurmain.php on line 84.
+ 1 APPPATH\Controllers\Controleurmain.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_temps_fort" on array', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:33:51 --> Unsupported operand types: array - array
+in APPPATH\Controllers\Controleurmain.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:34:18 --> Attempt to read property "id_temps_fort" on array
+in APPPATH\Controllers\Controleurmain.php on line 84.
+ 1 APPPATH\Controllers\Controleurmain.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_temps_fort" on array', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:34:36 --> Attempt to read property "libelle" on array
+in APPPATH\Views\voirinscriptions.php on line 38.
+ 1 APPPATH\Views\voirinscriptions.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "libelle" on array', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('voirinscriptions', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(88): view('voirinscriptions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:43:39 --> syntax error, unexpected single-quoted string "tempsFortInscrit", expecting "]"
+in APPPATH\Controllers\Controleurmain.php on line 92.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:43:50 --> Attempt to read property "id_temps_fort" on array
+in APPPATH\Controllers\Controleurmain.php on line 85.
+ 1 APPPATH\Controllers\Controleurmain.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_temps_fort" on array', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:44:27 --> syntax error, unexpected token "[", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Controleurmain.php on line 85.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:44:34 --> syntax error, unexpected single-quoted string "id_temps_fort", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Controleurmain.php on line 85.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 12:59:56 --> Undefined array key "id"
+in APPPATH\Views\voirinscriptions.php on line 45.
+ 1 APPPATH\Views\voirinscriptions.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php', 45)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('voirinscriptions', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(85): view('voirinscriptions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 13:02:18 --> syntax error, unexpected token ")"
+in APPPATH\Views\tempsForts.php on line 43.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsForts', [], true)
+ 3 APPPATH\Controllers\Controleurmain.php(65): view('tempsForts', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 13:33:15 --> mysqli_sql_exception: Champ 'id_utilisateur' inconnu dans where clause in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `ut...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ut...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ut...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ut...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscription(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 13:33:15 --> Champ 'id_utilisateur' inconnu dans where clause
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `utilisateur`
+WHERE `id_utilisateur` = :id_utilisateur:
+AND `id_temps_fort` = :id_temps_fort:
+AND `date` = :date:
+AND `accompagnateur` = :accompagnateur:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscription([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 13:34:01 --> mysqli_sql_exception: Champ 'id_utilisateur' inconnu dans where clause in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `ut...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ut...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ut...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ut...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscription(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 13:34:01 --> Champ 'id_utilisateur' inconnu dans where clause
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `utilisateur`
+WHERE `id_utilisateur` = :id_utilisateur:
+AND `id_temps_fort` = :id_temps_fort:
+AND `date` = :date:
+AND `accompagnateur` = :accompagnateur:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscription([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 13:35:32 --> mysqli_sql_exception: Champ 'id_utilisateur' inconnu dans where clause in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `ut...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ut...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ut...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ut...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 13:35:32 --> Champ 'id_utilisateur' inconnu dans where clause
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `utilisateur`
+WHERE `id_utilisateur` = :id_utilisateur:
+AND `id_temps_fort` = :id_temps_fort:
+AND `date` = :date:
+AND `accompagnateur` = :accompagnateur:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(44): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 13:41:41 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Controleurmain.php on line 239.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 13:58:10 --> syntax error, unexpected variable "$data", expecting "]"
+in APPPATH\Models\Monmodele.php on line 49.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\Controleurmain.php(80): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 13:58:40 --> Undefined constant "App\Models\builder"
+in APPPATH\Models\Monmodele.php on line 47.
+ 1 APPPATH\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscriptionTempsFort([...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 14:09:07 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Models\Monmodele.php on line 133.
+ 1 APPPATH\Controllers\Controleurmain.php(226): App\Models\Monmodele->desinscriptionTempsFort([...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->desinscriptionTempsFort()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 14:25:49 --> Undefined array key "id_utilisateur"
+in APPPATH\Views\voirinscriptions.php on line 47.
+ 1 APPPATH\Views\voirinscriptions.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_utilisateur"', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\voirinscriptions.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('voirinscriptions', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(85): view('voirinscriptions', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgConsultationInscriptions()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 14:41:10 --> Erreur insertion réservation: Undefined array key "participant_max"
+CRITICAL - 2025-03-09 14:44:07 --> Undefined variable $participant_max
+in APPPATH\Views\tempsFortsInscription.php on line 37.
+ 1 APPPATH\Views\tempsFortsInscription.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $participant_max', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\tempsFortsInscription.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempsFortsInscription', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(73): view('tempsFortsInscription', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsFortsInscription()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 14:44:51 --> Erreur insertion réservation: Undefined array key "participant_max"
+CRITICAL - 2025-03-09 14:46:03 --> syntax error, unexpected single-quoted string "participant_max", expecting "]"
+in APPPATH\Controllers\Controleurmain.php on line 202.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 14:46:17 --> mysqli_sql_exception: Champ 'participant_max' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 14:46:17 --> Champ 'participant_max' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`, `participant_max`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:, :participant_max:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 14:51:28 --> mysqli_sql_exception: Champ 'participant_max' inconnu dans field list in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 14:51:28 --> Champ 'participant_max' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`, `participant_max`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:, :participant_max:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 14:57:52 --> mysqli_sql_exception: Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-25')
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 14:57:52 --> Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (5) VALUES (:5:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-25')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:03:43 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2350.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2290): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert(null, true, '11', '2025-02-21')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:04:17 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2350.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2290): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert(null, true, '11', '2025-02-21')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:04:26 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2350.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2290): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert(null, true, '11', '2025-02-22')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 15:05:20 --> mysqli_sql_exception: Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-21')
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 15:05:20 --> Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (5) VALUES (:5:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-21')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 15:07:32 --> mysqli_sql_exception: Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-25')
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 15:07:32 --> Erreur de syntaxe près de '5) VALUES (:5:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (5) VALUES (:5:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('5', true, '11', '2025-02-25')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 15:10:41 --> mysqli_sql_exception: Erreur de syntaxe près de '11) VALUES (:11:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('11', true, '2025-02-21', '3')
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 15:10:41 --> Erreur de syntaxe près de '11) VALUES (:11:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (11) VALUES (:11:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('11', true, '2025-02-21', '3')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 15:10:55 --> mysqli_sql_exception: Erreur de syntaxe près de '11) VALUES (:11:)' à la ligne 1 in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('11', true, '2025-02-22', '1')
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort(Array)
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 15:10:55 --> Erreur de syntaxe près de '11) VALUES (:11:)' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (11) VALUES (:11:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(94): CodeIgniter\Database\BaseBuilder->insert('11', true, '2025-02-22', '1')
+ 3 APPPATH\Controllers\Controleurmain.php(211): App\Models\Monmodele->inscriptionTempsFort([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:12:03 --> Too few arguments to function App\Models\Monmodele::inscriptionTempsFort(), 1 passed in C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php on line 212 and exactly 2 expected
+in APPPATH\Models\Monmodele.php on line 86.
+ 1 APPPATH\Controllers\Controleurmain.php(212): App\Models\Monmodele->inscriptionTempsFort([...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

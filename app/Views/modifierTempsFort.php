@@ -7,25 +7,25 @@
 </head>
 <body>
     <br>
-<h2>Modifier un temps fort</h2>
-<form action="<?= base_url('/modifierTempsFort/'.$tempsFort->id) ?>" method="post">
-    <label for="libelle">Titre :</label>
-    <input type="text" name="libelle" value="<?= esc($tempsFort->libelle) ?>" required>
+    <h2>Modifier un temps fort</h2>
+    <form action="<?= base_url('/modifierTempsFort/'.$tempsFort->id) ?>" method="post">
+        <label for="libelle">Titre :</label>
+        <input type="text" name="libelle" value="<?= esc($tempsFort->libelle) ?>" required>
 
-    <label for="description">Description :</label>
-    <textarea name="description" required><?= esc($tempsFort->description) ?></textarea>
+        <label for="description">Description :</label>
+        <textarea name="description" required><?= esc($tempsFort->description) ?></textarea>
 
-    <label for="date_debut">Date début :</label>
-    <input type="date" name="date_debut" value="<?= esc($tempsFort->date_debut) ?>" required>
+        <label for="date_debut">Date début :</label>
+        <input type="date" name="date_debut" value="<?= esc($tempsFort->date_debut) ?>" required>
 
-    <label for="date_fin">Date fin :</label>
-    <input type="date" name="date_fin" value="<?= esc($tempsFort->date_fin) ?>" required>
+        <label for="date_fin">Date fin :</label>
+        <input type="date" name="date_fin" value="<?= esc($tempsFort->date_fin) ?>" required>
 
-    <label for="participant_max">Nombre max de participants :</label>
-    <input type="number" name="participant_max" value="<?= esc($tempsFort->participant_max) ?>" required>
+        <label for="participant_max">Nombre max de participants :</label>
+        <input type="number" name="participant_max" value="<?= esc($tempsFort->participant_max) ?>" required>
 
-    <button type="submit">Enregistrer</button>
-</form>
+        <button type="submit">Enregistrer</button>
+    </form>
 </div> 
 </body>
 </html>

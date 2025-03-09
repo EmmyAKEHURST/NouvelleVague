@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Profil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('css/menu.css'); ?>">
 </head>
 <body>  
     <?php // Message de succès après modification du profil
@@ -13,7 +14,7 @@
     <?php elseif (session()->getFlashdata('success')) :?>
         <div class="alert alert-danger"><?= session()->getFlashdata('danger') ?></div>
     <?php endif; ?>
-
+    
         <div class="info-container" id="no">
             <h2>Bienvenue, <?= esc($user->prenom) ?> <?= esc($user->nom) ?></h2>
             <p>Ici, tu as accès aux informations de ton compte, tu peux également les modifier si nécéssaire !</p>

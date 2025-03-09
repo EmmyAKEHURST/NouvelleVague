@@ -36,7 +36,7 @@
                             <li><?= anchor('/pgGestionTempsFort', 'Gestion Des Temps forts') ?></li> <!-- Permet au maire de gérer les événements importants -->
                         <?php else : ?>
                             <!-- Options spécifiques à un utilisateur normal -->
-                            <li><?= anchor('#', 'Mes Inscriptions') ?></li> <!-- Permet à l'utilisateur de voir ses propres inscriptions -->
+                            <li><?= anchor('pgConsultationInscriptions', 'Mes Inscriptions') ?></li> <!-- Permet à l'utilisateur de voir ses propres inscriptions -->
                         <?php endif; ?>
                         
                         <!-- Liens communs à tous les utilisateurs connectés -->

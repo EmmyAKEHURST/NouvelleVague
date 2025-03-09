@@ -32,6 +32,8 @@ $routes->post('/inscriptionEnvoieTF', 'Controleurmain::inscriptionEnvoieTF');
 $routes->get('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
 $routes->post('/modifierTempsFort/(:num)', 'Controleurmain::modifierTempsFort/$1');
 $routes->get('/supprimerTempsFort/(:num)', 'Controleurmain::supprimerTempsFort/$1');
+$routes->get('/pgConsultationInscriptions', 'Controleurmain::pgConsultationInscriptions');
+$routes->post('/desinscriptionTempsFort', 'Controleurmain::desinscriptionTempsFort');
 
 
 

@@ -16,6 +16,17 @@ class Monmodele extends Model{
         return $result->getRow()->nb;
     }
 
+    public function veriflogin($data){
+        $db = \Config\Database::connect();
+
+        $sql = "SELECT COUNT(*) as nb FROM utilisateur where login = ?";
+        $result = $db->query($sql, [
+            $data['login']
+        ]);
+        $db->close();
+        return $result->getRow()->nb;
+    }
+
     // Permet de valider linscription -->
     public function inscriptionValider($data){
         $db = \Config\Database::connect();
@@ -31,6 +42,7 @@ class Monmodele extends Model{
     
         $db->close();
     }
+
     // Permet de récupérer les temps forts -->
     public function getTempsForts(){
         $db = \Config\Database::connect();
@@ -38,6 +50,14 @@ class Monmodele extends Model{
         $results = $db->query($sql);
         $db->close();
         return $results->getResultArray();
+    }
+
+    public function getLeTempsFort($idTempsFort){
+        $db = \Config\Database::connect();
+        $sql = "SELECT * FROM temps_fort WHERE id = ?";
+        $results = $db->query($sql, [$idTempsFort]);
+        $db->close();
+        return $results->getRow();
     }
 
     // Permet de recuperer l'utilisateur avec son login -->
@@ -73,41 +93,72 @@ class Monmodele extends Model{
         return $db->table('utilisateur')->update($data, ['id' => $id]);
     }
 
-    // Permet de s'incrire à un temps fort
-    public function inscriptionTempsFort($data)
-{
-    $db = \Config\Database::connect();
-    $builder = $db->table('reservation');
-    $resultat = false;
-    
-    try {
-        $builder->insert($data);
-        $resultat = $db->affectedRows() > 0;
+    //permet de s'incrire à un temps fort
+    public function inscriptionTempsFort($data, $participant_max)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('reservation');
+        $resultat = false;
+        
+        try {
+            if($data['accompagnateur'] + 1 < $participant_max) {
+                $builder->insert($data);
+                $resultat = $db->affectedRows() > 0;
 
-        if ($resultat) { 
+                if ($resultat) { 
+                    $db->query(
+                        "UPDATE temps_fort 
+                        SET participant_max = participant_max - ? - 1 
+                        WHERE id = ?",
+                        [$data['accompagnateur'], $data['id_temps_fort']]
+                    );
+                }
+            }
             
-            $id_temps_fort = $data['id_temps_fort'];
-            $nbAccompagnateurs = isset($data['accompagnateur']) ? (int) $data['accompagnateur'] : 0;
-            
-            //calculer le nombre total de participants à soustraire (utilisateur + accompagnateurs)
-            $placesReservees = 1 + $nbAccompagnateurs;
-
-            // Mettre à jour le nombre de places restantes
-            $db->query("
-                UPDATE temps_fort 
-                SET participant_max = GREATEST(participant_max - ?, 0) 
-                WHERE id = ?
-            ", [$placesReservees, $id_temps_fort]); //GREATEST permet de ne pas descendre en dessous de 0
+        } catch (\Exception $e) {
+            log_message('error', 'Erreur insertion réservation: ' . $e->getMessage());
+        } finally {
+            $db->close();
         }
-    } catch (\Exception $e) {
-        log_message('error', 'Erreur insertion réservation: ' . $e->getMessage());
-    } finally {
+
+        return $resultat;
+    }
+
+      //Permet de se désinscrire d'un temps fort
+    public function desinscriptionTempsFort($data)
+    {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('reservation');
+        $builder->delete([
+            'id_utilisateur' => $data['id_utilisateur'],
+            'id_temps_fort' => $data['id_temps_fort'],
+            'date' => $data['date'],
+            'accompagnateur' => $data['accompagnateur']
+        ]);
+        
+        $db->query(
+            "UPDATE temps_fort 
+            SET participant_max = participant_max + ? + 1 
+            WHERE id = ?",
+            [$data['accompagnateur'], $data['id_temps_fort']]
+        );
+
         $db->close();
     }
 
-    return $resultat;
-}
-
+    // Permet de recuperer les inscriptions d'un utilisateur
+    public function getLesInscriptionsId($id_utilisateur)
+    {
+        $db = \Config\Database::connect();
+        $sql = "SELECT id_temps_fort, libelle, reservation.date, accompagnateur, id_utilisateur 
+        FROM reservation
+        JOIN temps_fort ON reservation.id_temps_fort = temps_fort.id
+        WHERE reservation.id_utilisateur = ?";
+        $results = $db->query($sql, [$id_utilisateur]);
+        $db->close();
+        return $results->getResultArray();
+    }
 
     public function verifInscriptionTempsFort($data){
         $db = \Config\Database::connect();

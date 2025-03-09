@@ -8,6 +8,7 @@
     <body>
 
     <?php
+        $participant_max = $_POST['participant_max'] ?? '';
         $datedebut = $_POST['date_debut'] ?? '';
         $datefin = $_POST['date_fin'] ?? '';
         $libelle = $_POST['libelle'] ?? 'Événement inconnu';
@@ -21,7 +22,7 @@
             <form action="<?= base_url('/inscriptionEnvoieTF') ?>" method="post">
                 <div class="mb-3">
                     <label for="accompagnateurs" class="form-label">Nombre d'accompagnateurs</label>
-                    <input type="number" class="form-control" id="accompagnateur" name="accompagnateur" value="<?= set_value('accompagnateur') ?>" required>
+                    <input type="number" class="form-control" id="accompagnateur" name="accompagnateur" value="<?= set_value('accompagnateur') ?>" required max="5">
                 </div>
 
                 <div class="mb-3">
@@ -30,7 +31,7 @@
                 </div>
 
                 <input type="hidden" name="idTempsFort" value="<?= htmlspecialchars($id) ?>">
-                
+                <input type="hidden" name="participant_max" value="<?= htmlspecialchars($participant_max) ?>">
                 <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
         </div>

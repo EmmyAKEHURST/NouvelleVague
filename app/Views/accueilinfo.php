@@ -11,17 +11,6 @@
     <div class="info-container">
         <h2>Bienvenue !</h2>
         <p>Vous venez d’arriver dans notre belle ville ? Getcet-sur-Mer vous ouvre ses bras !</p>
-        <br>
-        <br>
-        <p id="p2"> 
-            <b>Vous avez désormais la possibilité d'ajouter des accompagnateurs lors de votre inscription.</b>
-            N'hésitez donc pas à inviter vos proches !
-            Le nombre d'accompagnateurs est limité à 5 personnes afin de permettre à chaque habitant de participer aisément aux événements.
-        </p>
-        <br>
-        <p id="p2">
-            Vous pouvez vous désinscrire d'un événement à tout moment.
-        </p>
     </div>
     
     <div class="tempsfort-container">

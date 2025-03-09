@@ -41,7 +41,7 @@
                                 <input type="hidden" name="date_debut" value="<?= htmlspecialchars($tempsfort['date_debut']) ?>">
                                 <input type="hidden" name="date_fin" value="<?= htmlspecialchars($tempsfort['date_fin']) ?>">
                                 <?php if (session()->get('isLoggedIn')){ ?>
-                                    <button type="submit">S'inscrire...</button>
+                                    <center><button type="submit">S'inscrire...</button><center>
                                 <?php } else { ?>
                                     <a>Connectez-vous pour vous inscrire</a> 
                                 <?php } ?>

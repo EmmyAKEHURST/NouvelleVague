@@ -27,7 +27,7 @@
         <?php endif; ?>
 
         <!-- Formulaire de création -->
-        <form action="<?= base_url('/creerTempsFort') ?>" method="post">
+        <form action="<?= base_url('/creerTempsFort') ?>" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="libelle">Titre</label>
@@ -55,8 +55,8 @@
             </div>
 
             <div class="form-group">
-                <label for="img">Chemin de l'image (Mettre une image le dossier img et saisir juste le nom et l'extension)</label>
-                <input type="text" name="img" id="img" class="form-control" value="<?= set_value('img') ?>">
+                <label for="img">Image</label>
+                <input type="file" name="img" id="image" class="form-control-file">
             </div>
             
 

@@ -27,34 +27,32 @@
                     
                     <!-- Lien visible pour tous -->
                     <li><?= anchor('/tempsForts', 'Temps Forts') ?></li>
-                    
                     <?php if (session()->get('isLoggedIn')) : ?>
-                        
-                        <?php if ($role === 'maire') : ?>
-                            <!-- Options spécifiques au maire -->
-                            <li><?= anchor('/pgConsultationInscriptions', 'Consultation des Inscriptions') ?></li> <!-- Permet au maire de voir les inscriptions -->
-                            <li><?= anchor('/pgGestionTempsFort', 'Gestion Des Temps forts') ?></li> <!-- Permet au maire de gérer les événements importants -->
-                        <?php else : ?>
-                            <!-- Options spécifiques à un utilisateur normal -->
-                            <li><?= anchor('pgConsultationInscriptions', 'Mes Inscriptions') ?></li> <!-- Permet à l'utilisateur de voir ses propres inscriptions -->
-                        <?php endif; ?>
-                        
-                        <!-- Liens communs à tous les utilisateurs connectés -->
-                        <li><?= anchor('/pgProfil', 'Mon Profil') ?></li> <!-- Accès au profil personnel -->
-                        <li><?= anchor('/deconnexion', 'Déconnexion') ?></li> <!-- Lien pour se déconnecter -->
-                    
+                    <?php if ($role === 'maire') : ?>
+                        <!-- Options spécifiques au maire -->
+                        <li><?= anchor('/pgGestionTempsFort', 'Gestion Des Temps forts') ?></li> <!-- Permet au maire de gérer les événements importants -->
+                        <li><?= anchor('/pgConsultationParticipants/1', 'Consultation des Participants') ?></li>
+
                     <?php else : ?>
-                        <!-- Section pour les utilisateurs non connectés -->
-                        <li>
-                            <a href="#" class="desktop-item">Authentification</a>
-                            <input type="checkbox" id="showDropAuth">
-                            <label for="showDropAuth" class="mobile-item">Authentification</label>
-                            <ul class="drop-menu">
-                                <li><?= anchor('/pgInscription', 'Inscription') ?></li> <!-- Lien pour s'inscrire -->
-                                <li><?= anchor('/pgConnexion', 'Connexion') ?></li> <!-- Lien pour se connecter -->
-                            </ul>
-                        </li>
+                        <!-- Options spécifiques à un utilisateur normal -->
+                        <li><?= anchor('/pgConsultationInscriptions', 'Consultation des Inscriptions') ?></li> <!-- Permet à l'utilisateur de voir les inscriptions -->
                     <?php endif; ?>
+                    
+                    <!-- Liens communs à tous les utilisateurs connectés -->
+                    <li><?= anchor('/pgProfil', 'Mon Profil') ?></li> <!-- Accès au profil personnel -->
+                    <li><?= anchor('/deconnexion', 'Déconnexion') ?></li> <!-- Lien pour se déconnecter -->
+                <?php else : ?>
+                    <!-- Section pour les utilisateurs non connectés -->
+                    <li>
+                        <a href="#" class="desktop-item">Authentification</a>
+                        <input type="checkbox" id="showDropAuth">
+                        <label for="showDropAuth" class="mobile-item">Authentification</label>
+                        <ul class="drop-menu">
+                            <li><?= anchor('/pgInscription', 'Inscription') ?></li> <!-- Lien pour s'inscrire -->
+                            <li><?= anchor('/pgConnexion', 'Connexion') ?></li> <!-- Lien pour se connecter -->
+                        </ul>
+                    </li>
+                <?php endif; ?>
                 </ul>
                 <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
             </div>

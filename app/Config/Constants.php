@@ -41,6 +41,8 @@ defined('WEEK')   || define('WEEK', 604800);
 defined('MONTH')  || define('MONTH', 2_592_000);
 defined('YEAR')   || define('YEAR', 31_536_000);
 defined('DECADE') || define('DECADE', 315_360_000);
+define('IMG_PATH', FCPATH . 'img/');
+
 
 /*
  | --------------------------------------------------------------------------

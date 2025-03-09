@@ -522,3 +522,300 @@ in APPPATH\Models\Monmodele.php on line 86.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 15:48:44 --> Error connecting to the database: mysqli_sql_exception: Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nouvelle_vague', 3306, '', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(50): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(50): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-03-09 15:48:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Accès refusé pour l'utilisateur: '****'@'@localhost' (mot de passe: OUI)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Monmodele.php(50): CodeIgniter\Database\BaseConnection->query('SELECT * FROM temps_fort')
+ 3 APPPATH\Controllers\Controleurmain.php(12): App\Models\Monmodele->getTempsForts()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:55:38 --> syntax error, unexpected single-quoted string "image", expecting "]"
+in APPPATH\Controllers\Controleurmain.php on line 267.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Controleurmain')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Controleurmain')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Controleurmain', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:58:57 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Controleurmain.php on line 272.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:59:15 --> Undefined variable $file
+in APPPATH\Controllers\Controleurmain.php on line 274.
+ 1 APPPATH\Controllers\Controleurmain.php(274): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Controllers\\Controleurmain.php', 274)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 15:59:36 --> Undefined constant "App\Controllers\IMG_PATH"
+in APPPATH\Controllers\Controleurmain.php on line 274.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->creerTempsFort()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 16:09:34 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nouvelle_vague`.`reservation`, CONSTRAINT `Reservation_ibfk_2` FOREIGN KEY (`id_temps_fort`) REFERENCES `temps_fort` (`id`)) in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `te...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `te...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `te...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `te...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(219): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(356): App\Models\Monmodele->deleteTempsFort('1')
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->supprimerTempsFort('1')
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 16:09:34 --> Cannot delete or update a parent row: a foreign key constraint fails (`nouvelle_vague`.`reservation`, CONSTRAINT `Reservation_ibfk_2` FOREIGN KEY (`id_temps_fort`) REFERENCES `temps_fort` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `temps_fort`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(219): CodeIgniter\Database\BaseBuilder->delete()
+ 3 APPPATH\Controllers\Controleurmain.php(356): App\Models\Monmodele->deleteTempsFort('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->supprimerTempsFort('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:27:04 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 37.
+ 1 APPPATH\Views\menu.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:27:53 --> Undefined variable $tempsForts
+in APPPATH\Views\menu.php on line 37.
+ 1 APPPATH\Views\menu.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsForts', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:27:54 --> Undefined variable $tempsForts
+in APPPATH\Views\menu.php on line 37.
+ 1 APPPATH\Views\menu.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsForts', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:31:11 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:32:52 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:32:55 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(65): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->tempsForts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:32:56 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(40): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgProfil()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:32:56 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(248): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->pgGestionTempsFort()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:32:58 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:33:00 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:33:24 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:34:38 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:34:39 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:35:16 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-09 16:35:46 --> Undefined variable $tempsFortId
+in APPPATH\Views\menu.php on line 34.
+ 1 APPPATH\Views\menu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tempsFortId', 'C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NouvelleVague\\NouvelleVague\\app\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu', [], true)
+ 5 APPPATH\Controllers\Controleurmain.php(14): view('menu')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 16:51:36 --> mysqli_sql_exception: La table 'nouvelle_vague.inscriptions' n'existe pas in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `utilisa...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `utilisa...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `utilisa...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `utilisa...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(366): App\Models\Monmodele->getParticipantsByTempsFort('1')
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->consulterParticipants('1')
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 16:51:36 --> La table 'nouvelle_vague.inscriptions' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `utilisateurs`.`nom`, `utilisateurs`.`prenom`, `utilisateurs`.`mail`, `inscriptions`.`date`, `inscriptions`.`accompagnateur`
+FROM `inscriptions`
+JOIN `utilisateurs` ON `utilisateurs`.`id` = `inscriptions`.`id_utilisateur`
+WHERE `inscriptions`.`id_temps_fort` = :inscriptions.id_temps_fort:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Controleurmain.php(366): App\Models\Monmodele->getParticipantsByTempsFort('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->consulterParticipants('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-09 16:57:58 --> mysqli_sql_exception: Duplicata du champ '3-2' pour la clef 'reservation.PRIMARY' in C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\wamp64\www\NouvelleVague\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Models\Monmodele.php(105): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\NouvelleVague\NouvelleVague\app\Controllers\Controleurmain.php(212): App\Models\Monmodele->inscriptionTempsFort(Array, '22')
+#6 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+#7 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+#8 C:\wamp64\www\NouvelleVague\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\NouvelleVague\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-09 16:57:58 --> Duplicata du champ '3-2' pour la clef 'reservation.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`id_utilisateur`, `id_temps_fort`, `accompagnateur`, `date`) VALUES (:id_utilisateur:, :id_temps_fort:, :accompagnateur:, :date:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(105): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Controleurmain.php(212): App\Models\Monmodele->inscriptionTempsFort([...], '22')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Controleurmain->inscriptionEnvoieTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controleurmain))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -196,10 +196,17 @@ class Monmodele extends Model{
 
     public function supprimerTempsFort($id) {
         $db = \Config\Database::connect();
-        $builder = $db->table('temps_fort');
-        $builder->where('id', $id);
-        return $builder->delete();
+    
+        // Supprimer les réservations associées
+        $db->table('reservation')->where('id_temps_fort', $id)->delete();
+    
+        // Supprimer le temps fort
+        $db->table('temps_fort')->where('id', $id)->delete();
+    
+        return true;
     }
+    
+    
 
     public function getAllTempsForts() {
         return $this->db->table('temps_fort')->get()->getResult();
@@ -213,11 +220,26 @@ class Monmodele extends Model{
         return $this->db->table('temps_fort')->where('id', $id)->delete();
     }
     
-    
-    
+    public function getParticipantsByTempsFort($id_temps_fort) {
+        return $this->db->table('reservation')
+            ->select('utilisateur.nom, utilisateur.prenom, utilisateur.mail, reservation.date, reservation.accompagnateur')
+            ->join('utilisateur', 'utilisateur.id = reservation.id_utilisateur')
+            ->where('reservation.id_temps_fort', $id_temps_fort)
+            ->get()
+            ->getResultArray();
+    }
 
+    public function getAllParticipants() {
+        return $this->db->table('reservation')
+            ->select('temps_fort.libelle, utilisateur.nom, utilisateur.prenom, utilisateur.mail, reservation.date, reservation.accompagnateur')
+            ->join('utilisateur', 'utilisateur.id = reservation.id_utilisateur')
+            ->join('temps_fort', 'temps_fort.id = reservation.id_temps_fort')
+            ->orderBy('temps_fort.libelle', 'ASC')
+            ->get()
+            ->getResultArray();
+    }
     
-
+    
     
     
 

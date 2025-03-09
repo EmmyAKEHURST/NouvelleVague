@@ -256,37 +256,47 @@ class Controleurmain extends BaseController
             if (!$session->get('isLoggedIn') || $session->get('role') !== 'maire') {
                 return redirect()->to('/')->with('error', 'Accès non autorisé.');
             }
-
+        
             // Définir les règles de validation
             $rules = [
-                'libelle'              => 'required|max_length[255]',
-                'description'        => 'required',
-                'date_debut'         => 'required|valid_date',
-                'date_fin'           => 'required|valid_date',
-                'participant_max'  => 'required|integer'
+                'libelle'         => 'required|max_length[255]',
+                'description'     => 'required',
+                'date_debut'      => 'required|valid_date',
+                'date_fin'        => 'required|valid_date',
+                'participant_max' => 'required|integer',
+                'img'             => 'uploaded[img]|max_size[img,2048]|is_image[img]|mime_in[img,image/png,image/jpeg,image/jpg]'
             ];
-
+        
             if (!$this->validate($rules)) {
-                // En cas d'erreurs, redirige en conservant les erreurs et les anciennes valeurs
                 return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
             }
-
+        
+            // Gérer l'upload de l'image
+            $image = $this->request->getFile('img');
+            $newName = null; // Par défaut, pas d'image
+        
+            if ($image->isValid() && !$image->hasMoved()) {
+                $newName = $image->getRandomName();
+                $image->move(ROOTPATH . 'public/uploads/', $newName);
+            }
+        
             // Récupérer les données du formulaire
             $data = [
-                'libelle'             => $this->request->getPost('libelle'),
-                'description'       => $this->request->getPost('description'),
-                'date_debut'        => $this->request->getPost('date_debut'),
-                'date_fin'          => $this->request->getPost('date_fin'),
+                'libelle'         => $this->request->getPost('libelle'),
+                'description'     => $this->request->getPost('description'),
+                'date_debut'      => $this->request->getPost('date_debut'),
+                'date_fin'        => $this->request->getPost('date_fin'),
                 'participant_max' => $this->request->getPost('participant_max'),
-                'img'             => $this->request->getPost('img')
+                'img'             => $newName, // Enregistre le nom du fichier dans la BDD
             ];
-
-            // Appele le modèle pour insérer les données
+        
+            // Insérer dans la BDD
             $monmodel = new \App\Models\Monmodele();
             $monmodel->creerTempsFort($data);
-
+        
             return redirect()->to('/pgGestionTempsFort')->with('success', 'Temps fort créé avec succès.');
         }
+        
 
         public function modifierTempsFort($id) {
             $session = session();
@@ -349,6 +359,21 @@ class Controleurmain extends BaseController
                 return redirect()->to('/pgGestionTempsFort')->with('error', 'Impossible de supprimer le temps fort.');
             }
         }
+
+        public function consulterParticipants() {
+            $monmodel = new \App\Models\Monmodele();
+            
+            $participants = $monmodel->getAllParticipants();
+        
+            return view('menu')
+                .view('header')
+                .view('consultation_participants', ['participants' => $participants])
+                .view('footer');
+        }
+        
+        
+        
+        
         
         
 
